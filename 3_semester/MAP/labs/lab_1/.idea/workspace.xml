@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="018667a6-eeb4-41a7-adbf-6d1d28ea951a" name="Changes" comment="4yh method on the 4th problem completed + test">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_10_2023,_22_03_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3a0a1070-c067-41b6-a74d-8c0bfc503331" />
+        <option name="url" value="https://github.com/tudorrw/lab_1.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2WOLeohlTwaxpoPfGzU9dkrkEdL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/tudor/Ubb/3_semester/MAP/lab/lab_1/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="018667a6-eeb4-41a7-adbf-6d1d28ea951a" name="Changes" comment="" />
+      <created>1696598783655</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696598783655</updated>
+      <workItem from="1696598785858" duration="23328000" />
+      <workItem from="1696769704479" duration="251000" />
+      <workItem from="1696769972867" duration="18080000" />
+      <workItem from="1697042222989" duration="16844000" />
+      <workItem from="1698616330636" duration="27000" />
+      <workItem from="1698769368951" duration="1189000" />
+      <workItem from="1698775905099" duration="13000" />
+      <workItem from="1698775926167" duration="5000" />
+    </task>
+    <task id="LOCAL-00001" summary="sa vad daca mi merge sa dau commit">
+      <option name="closed" value="true" />
+      <created>1696600371720</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696600371721</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first method on the first problem">
+      <option name="closed" value="true" />
+      <created>1696705927354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696705927354</updated>
+    </task>
+    <task id="LOCAL-00003" summary="second and third method on the first problem, changes on for loops">
+      <option name="closed" value="true" />
+      <created>1696707780290</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696707780290</updated>
+    </task>
+    <task id="LOCAL-00004" summary="4th method done&#10;changes on the 3rd method&#10;new method to calculate the rounded grades">
+      <option name="closed" value="true" />
+      <created>1696710259441</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696710259441</updated>
+    </task>
+    <task id="LOCAL-00005" summary="create unit test class and test for the 1st method on the 1st problem">
+      <option name="closed" value="true" />
+      <created>1696760436699</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696760436700</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add more test for the 1st problem">
+      <option name="closed" value="true" />
+      <created>1696761860950</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696761860951</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1st problem tests completed">
+      <option name="closed" value="true" />
+      <created>1696764775981</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696764775982</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2nd problem completed">
+      <option name="closed" value="true" />
+      <created>1696767388642</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696767388642</updated>
+    </task>
+    <task id="LOCAL-00009" summary="tests on 2nd problem completed">
+      <option name="closed" value="true" />
+      <created>1696770298003</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696770298006</updated>
+    </task>
+    <task id="LOCAL-00010" summary="tests on 2nd problem completed">
+      <option name="closed" value="true" />
+      <created>1696770382942</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696770382942</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add method on 3rd problem completed + test">
+      <option name="closed" value="true" />
+      <created>1696783048058</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696783048058</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add method on 3rd problem completed + test">
+      <option name="closed" value="true" />
+      <created>1696783228361</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696783228361</updated>
+    </task>
+    <task id="LOCAL-00013" summary="subtract method on 3rd problem completed + test">
+      <option name="closed" value="true" />
+      <created>1696877726397</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696877726398</updated>
+    </task>
+    <task id="LOCAL-00014" summary="optimize the 1st method on the 3rd problem">
+      <option name="closed" value="true" />
+      <created>1696878123900</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696878123901</updated>
+    </task>
+    <task id="LOCAL-00015" summary="multiply method on the 3rd problem and + 2 tests">
+      <option name="closed" value="true" />
+      <created>1696884501210</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696884501211</updated>
+    </task>
+    <task id="LOCAL-00016" summary="divide method on the 3rd problem and + test">
+      <option name="closed" value="true" />
+      <created>1696886964827</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696886964827</updated>
+    </task>
+    <task id="LOCAL-00017" summary="change the divide method">
+      <option name="closed" value="true" />
+      <created>1697043210233</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697043210233</updated>
+    </task>
+    <task id="LOCAL-00018" summary="first three methods on the fourth problem + correct tests">
+      <option name="closed" value="true" />
+      <created>1697208108047</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697208108047</updated>
+    </task>
+    <task id="LOCAL-00019" summary="4yh method on the 4th problem completed + test">
+      <option name="closed" value="true" />
+      <created>1697269340238</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1697269340238</updated>
+    </task>
+    <task id="LOCAL-00020" summary="4yh method on the 4th problem completed + test">
+      <option name="closed" value="true" />
+      <created>1698775424945</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1698775424945</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sa vad daca mi merge sa dau commit" />
+    <MESSAGE value="first method on the first problem" />
+    <MESSAGE value="second and third method on the first problem, changes on for loops" />
+    <MESSAGE value="4th method done&#10;changes on the 3rd method&#10;new method to calculate the rounded grades" />
+    <MESSAGE value="create unit test class and test for the 1st method on the 1st problem" />
+    <MESSAGE value="add more test for the 1st problem" />
+    <MESSAGE value="1st problem tests completed" />
+    <MESSAGE value="2nd problem completed" />
+    <MESSAGE value="tests on 2nd problem completed" />
+    <MESSAGE value="add method on 3rd problem completed + test" />
+    <MESSAGE value="subtract method on 3rd problem completed + test" />
+    <MESSAGE value="optimize the 1st method on the 3rd problem" />
+    <MESSAGE value="multiply method on the 3rd problem and + 2 tests" />
+    <MESSAGE value="divide method on the 3rd problem and + test" />
+    <MESSAGE value="change the divide method" />
+    <MESSAGE value="first three methods on the fourth problem + correct tests" />
+    <MESSAGE value="4yh method on the 4th problem completed + test" />
+    <option name="LAST_COMMIT_MESSAGE" value="4yh method on the 4th problem completed + test" />
+  </component>
+</project>
