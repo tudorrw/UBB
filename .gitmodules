@@ -10,3 +10,6 @@
 [submodule "3_semester/MAP/labs/3_semester/MAP/labs/lab_5"]
 	path = 3_semester/MAP/labs/3_semester/MAP/labs/lab_5
 	url = https://github.com/tudorrw/lab_6
+[submodule "3_semester/MAP/labs/lab_5"]
+	path = 3_semester/MAP/labs/lab_5
+	url = https://github.com/tudorrw/lab_6
