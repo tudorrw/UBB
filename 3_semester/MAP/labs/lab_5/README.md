@@ -1,5 +1,6 @@
 REST Service:
 a. A REST controller must be implemented using Spring Boot.
+
 Architecture:
 a. A well-structured architecture based on multiple layers must be defined and implemented. For example: DAO, Repository, Service, Controller, UI (console application).
 b. Each person must define the chosen architecture and be able to justify their choice.
@@ -14,6 +15,8 @@ Tasks:
 Results:
   - Code illustrating the implementation of the design patterns.
 Initial setup of the REST service.
+
+
 Increment 5: Project Completion
 
 Submission Date: Week 13
