@@ -1,15 +1,9 @@
-[submodule "3_semester/MAP/labs/lab_2"]
-	path = 3_semester/MAP/labs/lab_2
-	url = https://github.com/tudorrw/lab_2
 [submodule "3_semester/MAP/labs/lab_3"]
 	path = 3_semester/MAP/labs/lab_3
 	url = https://github.com/tudorrw/lab_3
 [submodule "3_semester/MAP/labs/lab_4"]
 		path = 3_semester/MAP/labs/lab_4
 	url = https://github.com/tudorrw/lab_4
-[submodule "3_semester/MAP/labs/3_semester/MAP/labs/lab_5"]
-	path = 3_semester/MAP/labs/3_semester/MAP/labs/lab_5
-	url = https://github.com/tudorrw/lab_6
 [submodule "3_semester/MAP/labs/lab_5"]
 	path = 3_semester/MAP/labs/lab_5
 	url = https://github.com/tudorrw/lab_6
