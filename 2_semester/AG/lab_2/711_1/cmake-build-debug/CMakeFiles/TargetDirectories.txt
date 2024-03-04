@@ -1,0 +1,3 @@
+C:/Users/Tudor/UBB/2_semester/AG/lab_2/711_1/cmake-build-debug/CMakeFiles/711_1.dir
+C:/Users/Tudor/UBB/2_semester/AG/lab_2/711_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tudor/UBB/2_semester/AG/lab_2/711_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
