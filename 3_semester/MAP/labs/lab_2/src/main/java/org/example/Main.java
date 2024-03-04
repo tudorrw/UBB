@@ -14,7 +14,7 @@ public class Main {
         UserController userController = new UserController(userRepo);
         AdminController adminController = new AdminController(adminRepo);
         View view = new View(userController, adminController);
-
+        System.out.println("sa vad ca merge faza cu commit urile");
         view.run();
 
     }
