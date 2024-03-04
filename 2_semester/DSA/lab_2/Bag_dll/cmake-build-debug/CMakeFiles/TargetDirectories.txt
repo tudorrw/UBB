@@ -1,0 +1,3 @@
+D:/UBB/sem 2/DSA/labor 2/Bag dll/cmake-build-debug/CMakeFiles/Bag_dll.dir
+D:/UBB/sem 2/DSA/labor 2/Bag dll/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/UBB/sem 2/DSA/labor 2/Bag dll/cmake-build-debug/CMakeFiles/rebuild_cache.dir
