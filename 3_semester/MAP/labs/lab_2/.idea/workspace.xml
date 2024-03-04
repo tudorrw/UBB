@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73cf9450-0d1e-4a6d-8bb7-8ab289721103" name="Changes" comment="junit tests for user model, repository, controller">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/AdminView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_4" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_5" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/labs/lab_1" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PS/labs/lab_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PS/labs/lab_3" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PS/labs/lab_3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +26,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -66,7 +66,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_2",
+    "last_opened_file_path": "/Users/tudor/UBB/3_semester/MAP/labs/lab_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -206,6 +206,7 @@
       <workItem from="1698824340569" duration="4220000" />
       <workItem from="1699209269119" duration="49000" />
       <workItem from="1700218138184" duration="26000" />
+      <workItem from="1709562202865" duration="651000" />
     </task>
     <task id="LOCAL-00001" summary="creating lab_2&#10;-implementation of model entities&#10;-crating packages for MVC&#10;-crating repo interfac">
       <option name="closed" value="true" />

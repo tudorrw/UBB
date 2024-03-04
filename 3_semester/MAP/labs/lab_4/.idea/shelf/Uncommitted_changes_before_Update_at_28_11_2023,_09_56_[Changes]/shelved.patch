@@ -1,0 +1,482 @@
+Index: src/main/java/org/example/repo/GrowthStockRepository.java
+===================================================================
+diff --git a/src/main/java/org/example/repo/GrowthStockRepository.java b/src/main/java/org/example/repo/inMemoryRepo/GrowthStockRepository.java
+rename from src/main/java/org/example/repo/GrowthStockRepository.java
+rename to src/main/java/org/example/repo/inMemoryRepo/GrowthStockRepository.java
+--- a/src/main/java/org/example/repo/GrowthStockRepository.java	
++++ b/src/main/java/org/example/repo/inMemoryRepo/GrowthStockRepository.java	
+@@ -1,15 +1,13 @@
+-package org.example.repo;
++package org.example.repo.inMemoryRepo;
+ 
+-import org.example.model.Company;
+ import org.example.model.GrowthStock;
+-import org.example.model.Stock;
+-import org.example.utils.observer.Observer;
++import org.example.repo.IRepository;
+ 
+ import java.util.ArrayList;
+ import java.util.List;
+ 
+ public class GrowthStockRepository implements IRepository<GrowthStock> {
+-    private List<GrowthStock> growthStocks;
++    private ArrayList<GrowthStock> growthStocks;
+     private static GrowthStockRepository instance;
+ 
+     private GrowthStockRepository() {
+@@ -17,7 +15,7 @@
+     }
+ 
+     @Override
+-    public List<GrowthStock> getObjects() {
++    public ArrayList<GrowthStock> getObjects() {
+         return growthStocks;
+     }
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"73cf9450-0d1e-4a6d-8bb7-8ab289721103\" name=\"Changes\" comment=\"add functionality to stock profits (strategy to view)\">\n      <change afterPath=\"$PROJECT_DIR$/lib/mysql-connector-j-8.2.0.jar\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/controller/Controller.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/controller/IController.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/database/DBConnection.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/database/IDatabase.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/DBRepository.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/RepoTypes.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/utils/factory/UserRepoFactory.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/controller/CompanyController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/controller/CompanyController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/model/Market.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/model/Market.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/model/Notification.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/model/Notification.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/model/Portfolio.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/model/Portfolio.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/AdminRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/AdminRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/CompanyRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/CompanyRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/GrowthStockRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/GrowthStockRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/MarketRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/MarketRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/NotificationRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/NotificationRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/PortfolioRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/PortfolioRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/StockRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/StockRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/TransactionRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/TransactionRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/UserRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/UserRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/repo/ValueStockRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/ValueStockRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/view/CompanyView.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/view/CompanyView.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/view/View.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/view/View.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/org/example/test/UserControllerTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/org/example/test/UserControllerTest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/org/example/test/UserRepositoryTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/org/example/test/UserRepositoryTest.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JUnit5 Test Class\" />\n        <option value=\"Enum\" />\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"strategy-stocks\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"3a0a1070-c067-41b6-a74d-8c0bfc503331\" />\n        <option name=\"url\" value=\"https://github.com/tudorrw/lab_3.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 6\n}</component>\n  <component name=\"ProjectId\" id=\"2XSOLMt4Goa7GKGMbCzlPjMvNFu\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"ToolWindowCommit.ShowToolbar\": \"false\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary\": \"JUnit5\",\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5\": \"\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_4/lib\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"onboarding.tips.debug.path\": \"/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_2/src/main/java/org/example/Main.java\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  },\n  \"keyToStringList\": {\n    \"ChangesTree.GroupingKeys\": [\n      \"directory\",\n      \"module\"\n    ]\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/lib\" />\n    </key>\n    <key name=\"CreateTestDialog.Recents.Supers\">\n      <recent name=\"\" />\n    </key>\n    <key name=\"CreateTestDialog.RecentsKey\">\n      <recent name=\"org.example.test\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Main\" />\n      <module name=\"lab_2\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"org.example.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <module name=\"lab_3\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <module name=\"lab_3\" />\n      <option name=\"filePath\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"ShelveChangesManager\">\n    <option name=\"groupingKeys\">\n      <option value=\"directory\" />\n    </option>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"73cf9450-0d1e-4a6d-8bb7-8ab289721103\" name=\"Changes\" comment=\"\" />\n      <created>1698618959332</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1698618959332</updated>\n      <workItem from=\"1698618960842\" duration=\"526000\" />\n      <workItem from=\"1698619497958\" duration=\"49499000\" />\n      <workItem from=\"1698775961519\" duration=\"4516000\" />\n      <workItem from=\"1698824340569\" duration=\"4220000\" />\n      <workItem from=\"1699209319012\" duration=\"10867000\" />\n      <workItem from=\"1699339261666\" duration=\"1553000\" />\n      <workItem from=\"1699813998152\" duration=\"12295000\" />\n      <workItem from=\"1699910397005\" duration=\"24151000\" />\n      <workItem from=\"1700217777261\" duration=\"439000\" />\n      <workItem from=\"1700218273992\" duration=\"785000\" />\n      <workItem from=\"1700477269239\" duration=\"23618000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"creating lab_2&#10;-implementation of model entities&#10;-crating packages for MVC&#10;-crating repo interfac\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698679293452</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698679293452</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"creating lab_2&#10;-implementation of model entities&#10;-crating packages for MVC&#10;-crating repo interfac\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698679558260</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698679558260</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"creating new entities in controllor, repo, view for user and admin\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698689694800</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698689694800</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"adding methods to UserView\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698696649446</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698696649446</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Change Stock attributes company and market\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698700184991</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698700184991</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"user &amp; admin controller, and view (not complete!)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698705911334</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698705911334</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"add functionality to UserView\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698753470869</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698753470869</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"fix bugs UserView\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698767778063</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698767778064</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"junit tests for user model, repository, controller\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698775696187</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698775696187</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"lab 3\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699209634392</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699209634392</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"factory pattern in user-admin view\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699265965341</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699265965341</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"changes run method at exception handlings\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699269378543</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699269378543</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"static method createView\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699902467673</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699902467673</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"create Strategy on stocks\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699902712493</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699902712493</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"move all design pattern classes in the utils package\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699908369043</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699908369043</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"add some functionality to adminview - user crud operations\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699966831263</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699966831263</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"functionality to CompanyView\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699986448495</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699986448495</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"strategy stocks\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699991783930</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699991783930</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"view on company and market\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699991853122</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699991853122</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"add functionality to stock profits (strategy to view)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700036357537</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700036357537</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"21\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"RECENT_FILTERS\">\n      <map>\n        <entry key=\"Branch\">\n          <value>\n            <list>\n              <RecentGroup>\n                <option name=\"FILTER_VALUES\">\n                  <option value=\"HEAD\" />\n                </option>\n              </RecentGroup>\n            </list>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"main\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n              <option name=\"TEXT_FILTER_SETTINGS\">\n                <TextFilterSettings>\n                  <option name=\"MATCH_CASE\" value=\"true\" />\n                  <option name=\"REGEX\" value=\"true\" />\n                </TextFilterSettings>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"creating lab_2&#10;-implementation of model entities&#10;-crating packages for MVC&#10;-crating repo interfac\" />\n    <MESSAGE value=\"creating new entities in controllor, repo, view for user and admin\" />\n    <MESSAGE value=\"adding methods to UserView\" />\n    <MESSAGE value=\"Change Stock attributes company and market\" />\n    <MESSAGE value=\"user &amp; admin controller, and view (not complete!)\" />\n    <MESSAGE value=\"add functionality to UserView\" />\n    <MESSAGE value=\"fix bugs UserView\" />\n    <MESSAGE value=\"junit tests for user model, repository, controller\" />\n    <MESSAGE value=\"lab 3\" />\n    <MESSAGE value=\"factory pattern in user-admin view\" />\n    <MESSAGE value=\"changes run method at exception handlings\" />\n    <MESSAGE value=\"static method createView\" />\n    <MESSAGE value=\"create Strategy on stocks\" />\n    <MESSAGE value=\"move all design pattern classes in the utils package\" />\n    <MESSAGE value=\"add some functionality to adminview - user crud operations\" />\n    <MESSAGE value=\"functionality to CompanyView\" />\n    <MESSAGE value=\"strategy stocks\" />\n    <MESSAGE value=\"view on company and market\" />\n    <MESSAGE value=\"add functionality to stock profits (strategy to view)\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add functionality to stock profits (strategy to view)\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <breakpoint enabled=\"true\" type=\"java-exception\">\n          <properties class=\"java.util.InputMismatchException\" package=\"java.util\" />\n          <option name=\"timeStamp\" value=\"1\" />\n        </breakpoint>\n        <breakpoint enabled=\"true\" type=\"java-exception\">\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\n          <option name=\"timeStamp\" value=\"6\" />\n        </breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,14 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="73cf9450-0d1e-4a6d-8bb7-8ab289721103" name="Changes" comment="add functionality to stock profits (strategy to view)">
+-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-j-8.2.0.jar" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/Controller.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/IController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/database/DBConnection.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/database/IDatabase.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/DBRepository.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/RepoTypes.java" afterDir="false" />
++    <list default="true" id="73cf9450-0d1e-4a6d-8bb7-8ab289721103" name="Changes" comment="ceva schimbari la tipurile de date din model">
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/databaseRepo/UserDatabaseRepository.java" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/factory/UserRepoFactory.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+@@ -19,17 +13,11 @@
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CompanyController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Market.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Notification.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Portfolio.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/AdminRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/CompanyRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/GrowthStockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/GrowthStockRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/MarketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/MarketRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/NotificationRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/PortfolioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/PortfolioRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/StockRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/TransactionRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/UserRepository.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/IRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/IRepository.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/UserInMemoryRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repo/ValueStockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repo/inMemoryRepo/ValueStockRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/CompanyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/CompanyView.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/View.java" afterDir="false" />
+@@ -89,36 +77,41 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "ToolWindowCommit.ShowToolbar": "false",
+-    "WebServerToolWindowFactoryState": "false",
+-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+-    "git-widget-placeholder": "main",
+-    "last_opened_file_path": "/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_4/lib",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "onboarding.tips.debug.path": "/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_2/src/main/java/org/example/Main.java",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
++    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_4/lib&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/tudor/Ubb_Stuff/3_semester/MAP/lab/lab_2/src/main/java/org/example/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "ChangesTree.GroupingKeys": [
+-      "directory",
+-      "module"
++  &quot;keyToStringList&quot;: {
++    &quot;ChangesTree.GroupingKeys&quot;: [
++      &quot;directory&quot;,
++      &quot;module&quot;
++    ],
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;sqlserver&quot;,
++      &quot;postgresql&quot;,
++      &quot;mysql&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/lib" />
+@@ -186,7 +179,9 @@
+       <workItem from="1699910397005" duration="24151000" />
+       <workItem from="1700217777261" duration="439000" />
+       <workItem from="1700218273992" duration="785000" />
+-      <workItem from="1700477269239" duration="23618000" />
++      <workItem from="1700477269239" duration="42203000" />
++      <workItem from="1701157026921" duration="5000" />
++      <workItem from="1701157700488" duration="55000" />
+     </task>
+     <task id="LOCAL-00001" summary="creating lab_2&#10;-implementation of model entities&#10;-crating packages for MVC&#10;-crating repo interfac">
+       <option name="closed" value="true" />
+@@ -348,7 +343,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1700036357537</updated>
+     </task>
+-    <option name="localTasksCounter" value="21" />
++    <task id="LOCAL-00021" summary="jar + conectiunea in DBConnection, factory la RepoTypes">
++      <option name="closed" value="true" />
++      <created>1701113338126</created>
++      <option name="number" value="00021" />
++      <option name="presentableId" value="LOCAL-00021" />
++      <option name="project" value="LOCAL" />
++      <updated>1701113338126</updated>
++    </task>
++    <task id="LOCAL-00022" summary="ceva schimbari la tipurile de date din model">
++      <option name="closed" value="true" />
++      <created>1701113660870</created>
++      <option name="number" value="00022" />
++      <option name="presentableId" value="LOCAL-00022" />
++      <option name="project" value="LOCAL" />
++      <updated>1701113660870</updated>
++    </task>
++    <option name="localTasksCounter" value="23" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -419,7 +430,9 @@
+     <MESSAGE value="strategy stocks" />
+     <MESSAGE value="view on company and market" />
+     <MESSAGE value="add functionality to stock profits (strategy to view)" />
+-    <option name="LAST_COMMIT_MESSAGE" value="add functionality to stock profits (strategy to view)" />
++    <MESSAGE value="jar + conectiunea in DBConnection, factory la RepoTypes" />
++    <MESSAGE value="ceva schimbari la tipurile de date din model" />
++    <option name="LAST_COMMIT_MESSAGE" value="ceva schimbari la tipurile de date din model" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: src/main/java/org/example/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\n\nimport org.example.controller.*;\nimport org.example.model.*;\nimport org.example.repo.*;\nimport org.example.view.StockView;\nimport org.example.view.View;\n\npublic class Main {\n    public static void main(String[] args) {\n        IRepository<User> userRepo = UserRepository.getInstance();\n        IRepository<Admin> adminRepo = AdminRepository.getInstance();\n        IRepository<Company> companyRepo = CompanyRepository.getInstance();\n        IRepository<Market> marketRepo = MarketRepository.getInstance();\n        IRepository<ValueStock> valueStockIRepository = ValueStockRepository.getInstance();\n        IRepository<GrowthStock> growthStockIRepository = GrowthStockRepository.getInstance();\n        UserController userController = new UserController(userRepo);\n        AdminController adminController = new AdminController(adminRepo);\n        CompanyController companyController = new CompanyController(CompanyRepository.getInstance());\n        MarketController marketController = new MarketController(marketRepo);\n        GrowthStockController growthStockController = new GrowthStockController(growthStockIRepository);\n        ValueStockController valueStockController = new ValueStockController(valueStockIRepository);\n        View view = new View(userController, adminController, valueStockController, growthStockController,companyController, marketController);\n        view.run();\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Main.java b/src/main/java/org/example/Main.java
+--- a/src/main/java/org/example/Main.java	
++++ b/src/main/java/org/example/Main.java	
+@@ -1,26 +1,38 @@
+ package org.example;
+ 
+ import org.example.controller.*;
++import org.example.database.DBConnection;
+ import org.example.model.*;
+ import org.example.repo.*;
+-import org.example.view.StockView;
++import org.example.repo.inMemoryRepo.*;
+ import org.example.view.View;
+ 
++import java.sql.*;
++
+ public class Main {
+     public static void main(String[] args) {
+-        IRepository<User> userRepo = UserRepository.getInstance();
++        try {
++            DBConnection.setConnection("jdbc:mysql://localhost:3306/stockApp", "dev", "MAPstockDB123");
++        } catch (SQLException e) {
++            System.out.println(e.getMessage());
++            throw new RuntimeException();
++        }
++
++        IRepository<User> userRepo = UserInMemoryRepository.getInstance();
+         IRepository<Admin> adminRepo = AdminRepository.getInstance();
+         IRepository<Company> companyRepo = CompanyRepository.getInstance();
+         IRepository<Market> marketRepo = MarketRepository.getInstance();
+         IRepository<ValueStock> valueStockIRepository = ValueStockRepository.getInstance();
+         IRepository<GrowthStock> growthStockIRepository = GrowthStockRepository.getInstance();
+-        UserController userController = new UserController(userRepo);
++        UserController userController = UserController.getInstance();
+         AdminController adminController = new AdminController(adminRepo);
+         CompanyController companyController = new CompanyController(CompanyRepository.getInstance());
+         MarketController marketController = new MarketController(marketRepo);
+         GrowthStockController growthStockController = new GrowthStockController(growthStockIRepository);
+         ValueStockController valueStockController = new ValueStockController(valueStockIRepository);
+         View view = new View(userController, adminController, valueStockController, growthStockController,companyController, marketController);
+-        view.run();
++//        view.run();
++
++
+     }
+ }
+\ No newline at end of file
+Index: src/test/java/org/example/test/UserControllerTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.test;\n\nimport org.example.controller.UserController;\nimport org.example.repo.UserRepository;\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserControllerTest {\n    private UserController userController;\n    private UserRepository userRepository;\n\n    @BeforeEach\n    void setUp() {\n        this.userRepository = UserRepository.getInstance();\n        this.userController = new UserController(userRepository);\n\n    }\n    @Test\n    void findUser() {\n        userController.createUser(\"testUser\", \"testPassword\");\n        assertNotNull(userController.findUser(\"testUser\", \"testPassword\"));\n        assertNull(userController.findUser(\"testUser\", \"wrongPassword\"));\n    }\n\n    @Test\n    void createUser() {\n        assertTrue(userController.createUser(\"newUser\", \"newPassword\"));\n        assertFalse(userController.createUser(\"newUser\", \"newPassword\"));\n    }\n\n    @Test\n    void deleteUser() {\n        userController.createUser(\"toBeDeleted\", \"teBeDeletedPass\");\n        assertTrue(userController.deleteUser(\"toBeDeleted\", \"teBeDeletedPass\"));\n        assertFalse(userController.deleteUser(\"nonExistingUser\", \"somePassword\"));\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/example/test/UserControllerTest.java b/src/test/java/org/example/test/UserControllerTest.java
+--- a/src/test/java/org/example/test/UserControllerTest.java	
++++ b/src/test/java/org/example/test/UserControllerTest.java	
+@@ -1,7 +1,7 @@
+ package org.example.test;
+ 
+ import org.example.controller.UserController;
+-import org.example.repo.UserRepository;
++import org.example.repo.inMemoryRepo.UserInMemoryRepository;
+ import org.junit.jupiter.api.BeforeEach;
+ import org.junit.jupiter.api.Test;
+ 
+@@ -9,12 +9,12 @@
+ 
+ class UserControllerTest {
+     private UserController userController;
+-    private UserRepository userRepository;
++    private UserInMemoryRepository userRepository;
+ 
+     @BeforeEach
+     void setUp() {
+-        this.userRepository = UserRepository.getInstance();
+-        this.userController = new UserController(userRepository);
++        this.userRepository = UserInMemoryRepository.getInstance();
++        this.userController = UserController.getInstance();
+ 
+     }
+     @Test
+Index: src/main/java/org/example/view/CompanyView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.view;\n\nimport org.example.controller.CompanyController;\nimport org.example.model.Company;\n\nimport java.util.InputMismatchException;\nimport java.util.List;\nimport java.util.Scanner;\n\npublic class CompanyView {\n    private final CompanyController companyController;\n\n    public CompanyView(CompanyController companyController) {\n        this.companyController = companyController;\n    }\n    public void add() {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"Enter a company name: \");\n        String companyName = input.nextLine();\n        if (companyName.isEmpty()) {\n            System.out.println(\"Invalid company name!\");\n            return;\n        }\n\n        long numberShares = 1;\n        System.out.print(\"Enter company number of shares: \");\n        try {\n            numberShares = input.nextLong();\n            System.out.println(numberShares);\n        } catch(InputMismatchException e) {\n            System.out.println(\"Invalid input. Please enter a number.\");\n        }\n\n        System.out.print(\"Enter company capitalization: \");\n        try {\n            long capitalization = input.nextLong();\n            System.out.println(capitalization);\n            if (!companyController.addCompany(companyName, capitalization, numberShares)) {\n                System.out.println(\"Invalid capitalization!\");\n            }\n            else {\n                System.out.println(\"Company added succesfully\");\n            }\n        } catch(InputMismatchException e) {\n            System.out.println(\"Invalid input. Please enter a number.\");\n        }\n    }\n    public void getAllCompanies() {\n        List<Company> companies = companyController.getAll();\n        companies.stream().map(Object::toString).forEach(System.out::println);\n    }\n    public void deleteCompany() {\n        Scanner input = new Scanner(System.in);\n        System.out.println(\"Give the name of the company you want to delete: \");\n        String companyName = input.nextLine();\n        if (companyName.isEmpty()) {\n            System.out.println(\"Invalid company name!\");\n            return;\n        }\n        if(!companyController.removeCompany(companyName)){\n            System.out.println(\"This company doesn't exist in our database!\");\n        }\n        else {\n            System.out.println(\"Company successfully removed!\");\n        }\n    }\n\n    public void updateCompany() {\n        Scanner input = new Scanner(System.in);\n        System.out.println(\"Give the name of the company you want to update: \");\n        String companyName = input.nextLine();\n        if (companyName.isEmpty()) {\n            System.out.println(\"Invalid company name!\");\n            return;\n        }\n\n        System.out.println(\"What do you want to update: \");\n        System.out.println(\"1 Capitalization\");\n        System.out.println(\"2 Number of shares\");\n        try {\n            int selection = input.nextInt();\n            switch (selection) {\n                case 1:\n                    try {\n                        System.out.print(\"Enter new capitalization: \");\n                        long number = input.nextLong();\n                        System.out.println(number);\n                        if (!companyController.updateCompany(companyName, \"capitalization\", number)) {\n                            System.out.println(\"Invalid capitalization!\");\n                        }\n                        else {\n                            System.out.println(\"Company updated succesfully\");\n                        }\n                    } catch(InputMismatchException e) {\n                        System.out.println(\"Invalid input. Please enter a number.\");\n                    }\n\n                    break;\n                case 2:\n                    try {\n                        System.out.print(\"Enter new number of shares: \");\n\n                        long number = input.nextLong();\n                        System.out.println(number);\n                        if (!companyController.updateCompany(companyName, \"numberShares\", number)) {\n                            System.out.println(\"Invalid number of shares!\");\n                        }\n                        else {\n                            System.out.println(\"Company updated succesfully\");\n                        }\n                    } catch(InputMismatchException e) {\n                        System.out.println(\"Invalid input. Please enter a number.\");\n                    }\n                    break;\n            }\n            } catch (InputMismatchException e) {\n                System.out.println(\"Invalid input. Please enter a number.\");\n                input.next();\n            }\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/view/CompanyView.java b/src/main/java/org/example/view/CompanyView.java
+--- a/src/main/java/org/example/view/CompanyView.java	
++++ b/src/main/java/org/example/view/CompanyView.java	
+@@ -35,7 +35,7 @@
+         try {
+             long capitalization = input.nextLong();
+             System.out.println(capitalization);
+-            if (!companyController.addCompany(companyName, capitalization, numberShares)) {
++            if (!companyController.add(companyName, capitalization, numberShares)) {
+                 System.out.println("Invalid capitalization!");
+             }
+             else {
+Index: src/main/java/org/example/repo/CompanyRepository.java
+===================================================================
+diff --git a/src/main/java/org/example/repo/CompanyRepository.java b/src/main/java/org/example/repo/inMemoryRepo/CompanyRepository.java
+rename from src/main/java/org/example/repo/CompanyRepository.java
+rename to src/main/java/org/example/repo/inMemoryRepo/CompanyRepository.java
+--- a/src/main/java/org/example/repo/CompanyRepository.java	
++++ b/src/main/java/org/example/repo/inMemoryRepo/CompanyRepository.java	
+@@ -1,13 +1,14 @@
+-package org.example.repo;
++package org.example.repo.inMemoryRepo;
+ 
+ import org.example.model.Company;
++import org.example.repo.IRepository;
+ 
+ import java.util.ArrayList;
+ import java.util.List;
+ import java.util.Objects;
+ 
+ public class CompanyRepository implements IRepository<Company> {
+-    private List<Company> companies;
++    private ArrayList<Company> companies;
+     private static CompanyRepository instance;
+ 
+     void insert_values() {
+@@ -25,7 +26,7 @@
+     }
+ 
+     @Override
+-    public List<Company> getObjects() {
++    public ArrayList<Company> getObjects() {
+         return companies;
+     }
+ 
+Index: src/test/java/org/example/test/UserRepositoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.test;\n\nimport org.example.model.User;\nimport org.example.repo.UserRepository;\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.Test;\n\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserRepositoryTest {\n    private UserRepository userRepository;\n\n    @BeforeEach\n    void setUp(){\n        this.userRepository = UserRepository.getInstance();\n    }\n\n    @Test\n    void getObjects() {\n        assertEquals(4, userRepository.getObjects().size());\n    }\n\n    @Test\n    void save() {\n        User user = new User(5, \"qwerty\", \"1234\");\n        userRepository.save(user);\n        assertEquals(5, userRepository.getObjects().size());\n    }\n\n    @Test\n    void delete() {\n        User user1 = new User(5, \"bogdan\", \"123\");\n        userRepository.save(user1);\n        userRepository.delete(user1);\n        assertEquals(4, userRepository.getObjects().size());\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/example/test/UserRepositoryTest.java b/src/test/java/org/example/test/UserRepositoryTest.java
+--- a/src/test/java/org/example/test/UserRepositoryTest.java	
++++ b/src/test/java/org/example/test/UserRepositoryTest.java	
+@@ -1,18 +1,18 @@
+ package org.example.test;
+ 
+ import org.example.model.User;
+-import org.example.repo.UserRepository;
++import org.example.repo.inMemoryRepo.UserInMemoryRepository;
+ import org.junit.jupiter.api.BeforeEach;
+ import org.junit.jupiter.api.Test;
+ 
+ import static org.junit.jupiter.api.Assertions.*;
+ 
+ class UserRepositoryTest {
+-    private UserRepository userRepository;
++    private UserInMemoryRepository userRepository;
+ 
+     @BeforeEach
+     void setUp(){
+-        this.userRepository = UserRepository.getInstance();
++        this.userRepository = UserInMemoryRepository.getInstance();
+     }
+ 
+     @Test
+Index: src/main/java/org/example/repo/ValueStockRepository.java
+===================================================================
+diff --git a/src/main/java/org/example/repo/ValueStockRepository.java b/src/main/java/org/example/repo/inMemoryRepo/ValueStockRepository.java
+rename from src/main/java/org/example/repo/ValueStockRepository.java
+rename to src/main/java/org/example/repo/inMemoryRepo/ValueStockRepository.java
+--- a/src/main/java/org/example/repo/ValueStockRepository.java	
++++ b/src/main/java/org/example/repo/inMemoryRepo/ValueStockRepository.java	
+@@ -1,15 +1,13 @@
+-package org.example.repo;
++package org.example.repo.inMemoryRepo;
+ 
+-import org.example.model.Company;
+-import org.example.model.Stock;
+ import org.example.model.ValueStock;
+-import org.example.utils.observer.Observer;
++import org.example.repo.IRepository;
+ 
+ import java.util.ArrayList;
+ import java.util.List;
+ 
+ public class ValueStockRepository implements IRepository<ValueStock> {
+-    private List<ValueStock> valueStocks;
++    private ArrayList<ValueStock> valueStocks;
+     private static ValueStockRepository instance;
+ 
+     private ValueStockRepository() {
+@@ -17,7 +15,7 @@
+     }
+ 
+     @Override
+-    public List<ValueStock> getObjects() {
++    public ArrayList<ValueStock> getObjects() {
+         return valueStocks;
+     }
+ 
+Index: src/main/java/org/example/controller/AdminController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.controller;\n\nimport org.example.model.Admin;\nimport org.example.repo.AdminRepository;\nimport org.example.repo.IRepository;\n\nimport java.util.List;\n\npublic class AdminController {\n    private IRepository<Admin> adminRepository;\n    private int adminIdCounter;\n    public AdminController(IRepository<Admin> adminRepository) {\n        this.adminRepository = adminRepository;\n        this.adminIdCounter = adminRepository.getObjects().size() + 1;\n    }\n\n    public Admin findAdmin(String username) {\n        List<Admin> database = adminRepository.getObjects();\n        for(Admin admin: database) {\n            if(admin.getUsername() == username){\n                return admin;\n            }\n        }\n        return null;\n    }\n    public boolean createAdmin(String username, String password, String adminRole) {\n        if(findAdmin(username) != null) {\n            return false;\n        }\n        Admin newAdmin = new Admin(adminIdCounter++, username, password, adminRole);\n        adminRepository.save(newAdmin);\n        return true;\n    }\n\n    public void updateAdmin(Admin admin) {\n\n    }\n\n    public boolean deleteAdmin(String username) {\n        Admin admin = findAdmin(username);\n        if(admin == null) {\n            return false;\n        }\n        adminRepository.delete(admin);\n        return true;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/controller/AdminController.java b/src/main/java/org/example/controller/AdminController.java
+--- a/src/main/java/org/example/controller/AdminController.java	
++++ b/src/main/java/org/example/controller/AdminController.java	
+@@ -1,7 +1,6 @@
+ package org.example.controller;
+ 
+ import org.example.model.Admin;
+-import org.example.repo.AdminRepository;
+ import org.example.repo.IRepository;
+ 
+ import java.util.List;
+Index: src/main/java/org/example/controller/UserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.controller;\n\nimport org.example.repo.IRepository;\nimport org.example.repo.UserRepository;\nimport org.example.model.User;\n\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class UserController {\n    private final IRepository<User> userIRepository;\n    private int userIdCounter;\n\n    public UserController(IRepository<User> userIRepository) {\n        this.userIRepository = userIRepository;\n        this.userIdCounter = userIRepository.getObjects().size() + 1;\n    }\n\n    public User findUser(String username, String password) {\n        List<User> database = userIRepository.getObjects();\n        for(User user: database) {\n            if(user.getUsername().equals(username) && user.getPassword().equals(password)) {\n                return user;\n            }\n        }\n        return null;\n    }\n    public User findUser(String username) {\n        List<User> database = userIRepository.getObjects();\n        for(User user: database) {\n            if(user.getUsername().equals(username)) {\n                return user;\n            }\n        }\n        return null;\n    }\n\n    public boolean createUser(String username, String password) {\n        if(findUser(username) != null) {\n            return false;\n        }\n        User newUser = new User(userIdCounter++, username, password);\n        userIRepository.save(newUser);\n        return true;\n    }\n\n    public void updateUser() {\n\n    }\n\n    public boolean deleteUser(String username, String password) {\n        User user = findUser(username, password);\n        if(user == null) {\n            return false;\n        }\n        userIRepository.delete(user);\n        return true;\n    }\n    public boolean deleteUser(String username) {\n        User user = findUser(username);\n        if(user == null) {\n            return false;\n        }\n        userIRepository.delete(user);\n        return true;\n    }\n    public List<User> showAllUsers() {\n         return userIRepository.getObjects();\n\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/controller/UserController.java b/src/main/java/org/example/controller/UserController.java
+--- a/src/main/java/org/example/controller/UserController.java	
++++ b/src/main/java/org/example/controller/UserController.java	
+@@ -1,21 +1,37 @@
+ package org.example.controller;
+ 
+ import org.example.repo.IRepository;
+-import org.example.repo.UserRepository;
+ import org.example.model.User;
++import org.example.repo.RepoTypes;
++import org.example.utils.factory.UserRepoFactory;
+ 
+-import java.util.ArrayList;
++
+ import java.util.List;
+ 
+-public class UserController {
++public class UserController extends Controller<User> {
+     private final IRepository<User> userIRepository;
++    private static RepoTypes repoType;
++    private static UserController instance;
+     private int userIdCounter;
+ 
+-    public UserController(IRepository<User> userIRepository) {
++    private UserController(IRepository<User> userIRepository) {
+         this.userIRepository = userIRepository;
+         this.userIdCounter = userIRepository.getObjects().size() + 1;
+     }
+ 
++    public static UserController getInstance() {
++        if(instance == null) {
++            if(repoType == null) {
++                throw new RuntimeException("repository type bot provided");
++                IRepository<User> iRepository = UserRepoFactory.createUserRepository(repoType);
++                instance = new UserController(iRepository);
++            }
++        }
++        return instance;
++    }
++    public static void setRepoType(RepoTypes r) {
++        repoType = r;
++    }
+     public User findUser(String username, String password) {
+         List<User> database = userIRepository.getObjects();
+         for(User user: database) {
+@@ -68,5 +84,4 @@
+          return userIRepository.getObjects();
+ 
+     }
+-
+ }
