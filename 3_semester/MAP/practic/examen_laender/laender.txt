@@ -1,0 +1,5 @@
+Afghanistan Asien 652230 25500100 Kabul
+Marokko Afrika 4465 36910560 Rabat
+Mongolei Asien 1564110 3278292 Ulan-Bator
+Rumanien Europa 238397 19000000 Bucharest
+Albanien Europa 28748 2821977 Tirana
