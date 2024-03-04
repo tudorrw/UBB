@@ -1,0 +1,10 @@
+version: '3'
+services:
+  examen-practic:
+    restart: always
+    tty: true
+    image: public.ecr.aws/t7u3l2e4/ubb-map-practic
+    ports:
+      - '8997:8997'
+    volumes:
+      - ./examen:/home/coder/examen

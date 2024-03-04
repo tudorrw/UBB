@@ -1,0 +1,72 @@
+1p Identifizieren Sie jede Verantwortung und jedes Anliegen Ihrer Lösung korrekt und platzieren Sie sie in Komponenten, die sie umfassen.
+
+Erstellen Sie eine Lösung zur Verwaltung eines Universitätskursanmeldesystems. Sie finden alle Kursen in der Datei namens
+"course_registration.csv" mit den Spalten: "student_id", "course_code", "semester", "grade" und "status".
+Die Spalten sind durch das "_"-Zeichen getrennt
+
+A. 2p Lesen Sie den Inhalt der Datei "course_registration.csv" und wandeln Sie jede Zeile in ein Java-Objekt um, indem
+    Sie es entsprechend modellieren. Erstellen Sie eine Klasse, die definiert, wie ein Eintrag aus der Datei als Objekt aussehen sollte.
+    Das Ergebnis sollte vom Typ: ArrayList<CourseRegistration> sein.
+B. 1p Verwenden Sie Java-Streams, um auf dem Bildschirm die Kurse und die Anzahl der eingeschriebenen Studenten für jeden
+    Kurs anzuzeigen, absteigend sortiert nach der Anzahl.
+C. 2p Verwenden Sie Java-Streams und, aber nicht nur, die entsprechende .map()-Methode, um in eine Datei namens "failed_students.txt" alle
+    Studenten-IDs zu speichern, die den Status "Failed" haben.
+D. 1p Implementieren Sie ein Designmuster, um eine Klasse "CourseCoordinator" zu erstellen, die den Kurs koordinieren soll.
+    Aber heute ist der Koordinator krank und der Vertretungslehrer wird ihn ersetzen. Der Vertretungslehrer weiß, wie man
+    den Kurs koordiniert, genauso wie ein "CourseCoordinator", aber jeder weiß, dass er kein "CourseCoordinator" ist.
+    Hinterlassen Sie einen Kommentar mit dem Namen des verwendeten Designmusters.
+E. 1p Erstellen Sie einen Test, um die Umsetzung von "D" zu garantieren.
+F. 1p Definieren Sie zwei Threads, die die Liste der Kursanmeldungen verwenden. Der erste Thread fügt 5 neue Anmeldungen hinzu,
+   wobei zwischen jeder Anmeldung eine Verzögerung von 2 Sekunden besteht. Der zweite Thread überprüft ständig,
+   ob eine neue Anmeldung hinzugefügt wurde, und zeigt sie auf dem Bildschirm an.
+
+Beispiel-Ausgabe:
+Thread-1: Neue Anmeldung hinzufügen und 2 Sekunden warten
+Thread-2: Neue Anmeldung hinzugefügt!
+Thread-1: Neue Anmeldung hinzufügen und 2 Sekunden warten
+Thread-2: Neue Anmeldung hinzugefügt!
+Thread-1: Neue Anmeldung hinzufügen und 2 Sekunden warten
+Thread-2: Neue Anmeldung hinzugefügt!
+.
+.
+.
+Die gleichen Nachrichten noch zweimal
+
+
+
+#############################################################################################################################################################
+
+1p Correctly identify each responsibility and concern of your solution and place them in components which encapsulate them.
+
+Create a solution for managing a university course registration system.
+You’ll find in the file called "course_registration.csv" with columns: "student_id", "course_code", "semester", "grade", and "status." all the courses.
+The columns are separated by the "_" character.
+
+
+A. 2p Read the contents of the "course_registration.csv" file and convert each line into a Java object, modeling it accordingly.
+    Create a class that defines how an entry from the file should look like as an object.
+    The result should be of type: ArrayList<CourseRegistration>.
+B. 1p Using Java streams, display on the screen the courses and the number of students registered for each course,
+    sorted descending based on the count.
+C. 2p Using Java streams and their respective, but not only, .map() method, save to a file called "failed_students.txt" all the student
+    IDs who have a status set to "Failed."
+D. 1p Implement a design pattern to create a class "CourseCoordinator" which is supposed to coordinate the class.
+    But today the coordinator is sick and the substitute teacher will replace him. The substitute teacher knows how to coordinate the class, the same as a CourseCoordinator, but everyone knows that he is not a “CourseCoordinator”. Leave a comment containing the name of the design pattern which you used.
+E. 1p Create a test to ensure the implementation from "D."
+F. 1p Define two threads that use the list of course registrations. The first thread will add 5 new registrations with a
+    delay of 2 seconds between each. The second thread will constantly check if a new registration has been added and display it on the screen.
+
+	Example output:
+	Thread-1: Added new registration and waiting 2 seconds
+    Thread-2: New registration added!
+	Thread-1: Added new registration and waiting 2 seconds
+    Thread-2: New registration added!
+	Thread-1: Added new registration and waiting 2 seconds
+    Thread-2: New registration added!
+    .
+    .
+    .
+    Same messages two more times
+
+
+1p ex-officio point

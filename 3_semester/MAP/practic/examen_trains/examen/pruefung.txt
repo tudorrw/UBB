@@ -1,0 +1,80 @@
+Subject 6 - DE
+
+1p Identifizieren Sie jede Verantwortung und jedes Anliegen Ihrer Lösung korrekt und platzieren Sie sie in
+Komponenten, die sie umfassen.
+
+Entwickeln Sie ein System zur Verwaltung eines Bahnhofs. Sie finden den Fahrplan in einer Datei namens
+"train_schedule.csv" mit den Spalten: "train_number," "destination," "departure_time," "platform" und "status".
+Die Spalten sind durch das ","-Zeichen getrennt.
+
+A. 2p Lesen Sie den Inhalt der Datei "train_schedule.csv" und wandeln Sie jede Zeile in ein Java-Objekt um,
+    indem Sie es entsprechend modellieren. Erstellen Sie eine Klasse, die definiert, wie ein Eintrag aus der Datei
+    als Objekt aussehen sollte. Das Ergebnis sollte vom Typ: ArrayList<TrainEntry> sein.
+B. 1p Verwenden Sie Java-Streams, um auf dem Bildschirm die Destinationen und die Anzahl der Züge für jede Destination
+    anzuzeigen, absteigend sortiert nach der Anzahl.
+C. 2p Verwenden Sie Java-Streams und die entsprechende .map()-Methode, um in eine Datei namens "delayed_platform.txt"
+    die Bahnsteignummern der Züge zu speichern, deren Status auf "delayed" gesetzt ist.
+D. 1p Implementieren Sie ein Designmuster, um eine Klasse "Train" zu erstellen, die inkrementell konfiguriert werden kann.
+    Die Klasse wird eine Methode "ignition()" haben. Diese Methode wirft eine Ausnahme, wenn das "Train"-Objekt nicht
+    vollständig konfiguriert ist.
+E. 1p Bereiten Sie einen Test vor, um die Umsetzung von "D" zu garantieren.
+F. 1p Definieren Sie zwei Threads, die als Züge fungieren, die an einem Bahnsteig ankommen. Der Bahnsteig erlaubt jeweils
+   nur einen Zug. Der Zug kommt am Bahnsteig an und bleibt 2 Sekunden stehen. Nachdem der Zug abgefahren ist, kommt
+   der zweite Zug an und verhält sich genauso. Dies geht unendlich weiter. Während der andere Zug wartet, sollte er
+   jede Sekunde auf dem Bildschirm anzeigen, dass er darauf wartet, am Bahnsteig anzukommen.
+
+Beispiel-Ausgabe:
+    Zug-1: Am Bahnsteig angekommen! Warte 2 Sekunden vor der Abfahrt
+    Zug-2: Warte darauf, dass der Bahnsteig frei ist
+    Zug-2: Warte darauf, dass der Bahnsteig frei ist
+    Zug-1: Verlasse den Bahnsteig!
+    Zug-2: Am Bahnsteig angekommen! Warte 2 Sekunden vor der Abfahrt
+    Zug-1: Warte darauf, dass der Bahnsteig frei ist
+    Zug-1: Warte darauf, dass der Bahnsteig frei ist
+    Zug-2: Verlasse den Bahnsteig!
+    .
+    .
+    .
+
+1p von Amts wegen Punkt
+
+
+#############################################################################################################################################################
+
+Subject 6 - EN
+
+1p Correctly identify each responsibility and concern of your solution and place them in components which encapsulate them.
+
+Develop a system for managing a train station.you’ll find the train schedule in a file called "train_schedule.csv" with
+columns: "train_number," "destination," "departure_time," "platform," and "status." The columns are separated by the ","
+character.
+
+A. 2p Read the contents of the "train_schedule.csv" file and convert each line into a Java object, modeling it accordingly.
+   Create a class that defines how an entry from the file should look like as an object.
+   The result should be of type: ArrayList<TrainEntry>.
+B. 1p Using Java streams, display on the screen the destinations and the number of trains for each destination,
+   sorted descending based on the count.
+C. 2p Using Java streams and their respective .map() method, save to a file called "delayed_platform.txt" the platform
+   numbers of the train whose status is set to "delayed."
+D. 1p Implement a design pattern to create a class "Train" which can be incrementally configured.The class will have an
+   “ignition()” method. This method will throw an exception if the “Train” object is not completely configured.
+E. 1p Prepare a test to guarantee the implementation from "D."
+F. 1p Define two threads that act as trains which arrive at a platform. The platform only allows one train at a time.
+   The train arrives at the platform and stays for 2 seconds. After the train leaves, the 2nd train arrives and behaves
+   the same. This goes on indefinitely. While the other train is waiting, it should display to the screen every second
+   that it’s waiting to arrive at the platform.
+
+Example output:
+    Train-1: Arrived at the platform! Waiting 2 seconds before departure
+    Train-2: Waiting for platform to be free
+    Train-2: Waiting for platform to be free
+    Train-1: Leaving platform!
+    Train-2: Arrived at the platform! Waiting 2 seconds before departure
+    Train-1: Waiting for platform to be free
+    Train-1: Waiting for platform to be free
+    Train-2: Leaving platform!
+    .
+    .
+    .
+
+1p Ex-officio point

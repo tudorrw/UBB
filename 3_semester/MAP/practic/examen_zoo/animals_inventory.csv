@@ -1,0 +1,6 @@
+name,species,age,enclosure_type,health_status
+Lion,Panthera leo,5,Cage,Healthy
+Elephant,Loxodonta africana,10,Enclosure,Sick
+Giraffe,Giraffa camelopardalis,7,Enclosure,Healthy
+Zebra,Equus zebra,4,Cage,Healthy
+Penguin,Spheniscus demersus,2,Enclosure,Sick

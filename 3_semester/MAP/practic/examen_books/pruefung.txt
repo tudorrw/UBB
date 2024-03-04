@@ -1,0 +1,60 @@
+1p Identifizieren Sie jede Verantwortung und jedes Anliegen Ihrer Lösung korrekt und platzieren Sie sie in Komponenten, die sie umfassen.
+
+Helfen Sie einer Bibliothek dabei, einige Einblicke in die ausgeliehenen Bücher zu erhalten.
+In der Datei "borrowed_books.csv" finden Sie eine Liste von Büchern und wie oft sie ausgeliehen wurden. Die Spalten lauten: "title", "author", "genre", "borrowed_days" und "borrower_id".
+Die Spalten sind durch das ";"-Zeichen getrennt.
+
+A. 2p Lesen Sie den Inhalt der Datei "borrowed_books.csv" und wandeln Sie jede Zeile in ein Java-Objekt um, indem Sie es entsprechend modellieren.
+ (Erstellen Sie eine Klasse, die definiert, wie ein Eintrag aus der Datei als Objekt aussehen sollte.) Das Ergebnis sollte vom Typ: ArrayList<BorrowedBook> sein.
+B. 1p Verwenden Sie Java-Streams, um auf dem Bildschirm die Genres und die Anzahl der Ausleihen von Büchern dieses Genres anzuzeigen, absteigend sortiert nach der Ausleihanzahl.
+C. 2p Verwenden Sie Java-Streams und die entsprechende .map()-Methode, um alle Titel, in Kleinbuchstaben, die länger als 5 Tage ausgeliehen wurden, in eine Datei namens "borrowed_long.txt" zu speichern.
+D. 1p Verwenden Sie ein Designmuster, um eine Klasse "Book" zu definieren, die die Felder Titel und Autor hat und sicherstellt, dass nur eine Instanz in Ihrem Programm erstellt wird.
+    Verwenden Sie beide Felder, um zu überprüfen, ob die Instanz bereits existiert. Hinterlassen Sie einen Kommentar mit dem Namen des verwendeten Designmusters.
+E. 1p Bereiten Sie einen Test vor, der die Umsetzung von "D" garantiert.
+F. 1p Definieren Sie zwei Threads, die die Liste der ausgeliehenen Bücher verwenden.
+ Der erste Thread zeigt auf dem Bildschirm alle ausgeliehenen Bücher im Format: "Thread-1: <ausgeliehener Bucheintrag>".
+ Der zweite Thread zeigt: "Thread-2: Start", bevor der erste Thread etwas anzeigen darf.
+  Nachdem der erste Thread fertig ist, zeigt der zweite Thread auf dem Bildschirm die Nachricht: "Thread-2: Fertig" an.
+  Beide Threads sollten gleichzeitig starten.
+Beispiel-Ausgabe:
+
+Thread-2: Start
+Thread-1: Pet Cemetery, Stephen King, Horror, 5, 5
+Thread-1: Ion, Liviu Rebreanu, Drama, 10, 3
+Thread-1: Flash-uri din sens opus, Marian Godina, Komödie, 2, 1
+.
+.
+Thread-2: Fertig
+
+1p. von Amts wegen
+
+#############################################################################################################################################################
+
+1p Correctly identify each responsibility and concern of your solution and place them in components which encapsulate them.
+
+Help a library to find out some insights into the books which get borrowed. In “borrowed_books.csv” you will find a list of books and the number of times they were borrowed.
+The columns are: “title”, “author”, “genre”, “borrowed_days” and “borrower_id”. The columns are separated by the “;” character.
+
+A. 2p Read the contents of the “borrowed_books.csv” file and convert every line in a java object, modeling it accordingly.
+ (Create a class which defines how an entry from the file should look like as an object). The result be of type: ArrayList<BorrowedBook>
+B. 1p Using Java streams, display on the screen the genres and the number of times books of that genre have been borrowed, sorted descending based on the borrow count.
+C. 2p  Using Java streams and their respective .map() method, save to a file called: “borrowed_long.txt” all the titles, in lowercase, which have been borrowed for longer than 5 days.
+D. 1p Using a design pattern, define a class “Book”, having the fields title and author, which makes sure that only one instance is created in your program.
+    Use both fields to check if the instance already exists. Leave a comment containing the name of the design pattern which you used.
+E. 1p Prepare a test which guarantees the implementation from “D”.
+F. 1p Define two threads which use the list of borrowed books.
+    The first thread will display on the screen all the borrowed books in the format: “Thread-1: <borrowed book record>”.
+    The second thread will display: “Thread-2: Start”, before the first thread is allowed to display anything.
+    After the first thread finishes, the second thread will display on the screen the message: “Thread-2: Done”.
+    Both threads should start concurrently.
+Example output:
+
+Thread-2: Start
+Thread-1: Pet cemetery, Stephen King, Horror, 5, 5
+Thread-1: Ion, Liviu Rebreanu,Drama, 10, 3
+Thread-1:Flash-uri din sens opus,Marian Godina,Comedie, 2, 1
+.
+.
+Thread-2: Done
+
+1p ex-officio point

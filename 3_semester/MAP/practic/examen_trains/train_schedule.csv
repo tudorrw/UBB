@@ -1,0 +1,6 @@
+train_number,destination,departure_time,platform,status
+101,New York,08:00 AM,Platform 1,On time
+102,Boston,08:30 AM,Platform 2,Delayed
+103,Chicago,09:00 AM,Platform 3,On time
+104,San Francisco,09:30 AM,Platform 4,On time
+105,Los Angeles,10:00 AM,Platform 5,Delayed
