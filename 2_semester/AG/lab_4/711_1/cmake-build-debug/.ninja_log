@@ -1,0 +1,8 @@
+# ninja log v5
+0	140	7312959188530120	build.ninja	39d06e49e724a4b
+7	356	7048281544991520	CMakeFiles/Ciobanu_Tudor_711_lab4.dir/main.cpp.obj	9fefcbe956354fa3
+3	611	7048281547531502	CMakeFiles/Ciobanu_Tudor_711_lab4.dir/Graph.cpp.obj	1d71db3634d5e19d
+611	736	7048281548761523	Ciobanu_Tudor_711_lab4.exe	ad71d8cdeb4848dc
+3	434	7312959276164374	CMakeFiles/Ciobanu_Tudor_711_lab4.dir/main.cpp.obj	9b08414d761addb7
+9	691	7312959278725122	CMakeFiles/Ciobanu_Tudor_711_lab4.dir/Graph.cpp.obj	90c3f587f81eb4ed
+691	838	7312959280150337	Ciobanu_Tudor_711_lab4.exe	ad71d8cdeb4848dc
