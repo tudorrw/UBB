@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "error: invalid number of parameters"
+    exit 1
+fi
+
+file="$1"
+
+if [[ ! -f $file ]]; then
+    echo "error: cannot open file ${file}"
+    exit 1
+fi
+
+sed 'y/aeiou|AEIOU/AEIOU|aeiou/' $file  

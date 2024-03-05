@@ -1,0 +1,3 @@
+Das ist eine Beispieldatei.
+Mir geht es gut.
+Hallo, wie geht es Ihnen heute?

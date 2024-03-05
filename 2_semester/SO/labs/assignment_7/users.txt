@@ -1,0 +1,16 @@
+josm2345:x:1490234617:1250123456:John David Smith:/home/users/stud/josm2345:/bin/bash
+saej5678:x:1345698741:1250123456:Sarah Elizabeth Johnson:/home/users/stud/saej5678:/bin/bash
+mijr3456:x:1328450123:1250123456:Michael James Rodriguez:/home/users/stud/mijr3456:/bin/bash
+emki2345:x:1501269875:1250123456:Emily Marie Kim:/home/users/stud/emki2345:/bin/bash
+chry2345:x:1412563980:1250123456:Christopher Ryan Lee:/home/users/stud/chry2345:/bin/bash
+salb4567:x:1598745621:1250123456:Samantha Lynn Brown:/home/users/stud/salb4567:/bin/bash
+dape5678:x:1378903452:1250123456:Daniel Alexander Perez:/home/users/stud/dape5678:/bin/bash
+jely4567:x:1489023560:1250123456:Jessica Lynn Garcia:/home/users/stud/jely4567:/bin/bash
+matc3456:x:1345692870:1250123456:Matthew Thomas Clark:/home/users/stud/matc3456:/bin/bash
+laen5678:x:1534698724:1250123456:Lauren Elizabeth Nguyen:/home/users/stud/laen5678:/bin/bash
+rowi2345:x:1580293456:1250123456:Robert William Davis:/home/users/stud/rowi2345:/bin/bash
+elwi4567:x:1369450281:1250123456:Elizabeth Grace Wilson:/home/users/stud/elwi4567:/bin/bash
+andr3456:x:1489024563:1250123456:Andrew David Brown:/home/users/stud/andr3456:/bin/bash
+sale2345:x:1598702345:1250123456:Sarah Jane Lee:/home/users/stud/sale2345:/bin/bash
+mijp5678:x:1490234785:1250123456:Michael James Perez:/home/users/stud/mijp5678:/bin/bash
+emga2345:x:1501269345:1250123456:Emily Marie Garcia:/home/users/stud/emga2345:/bin/bash
