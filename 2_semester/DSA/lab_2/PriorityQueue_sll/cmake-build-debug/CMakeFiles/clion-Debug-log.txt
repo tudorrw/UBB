@@ -1,16 +1,16 @@
-"C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "D:\UBB\sem 2\DSA\labor 2\PriorityQueue sll" -B "D:\UBB\sem 2\DSA\labor 2\PriorityQueue sll\cmake-build-debug"
--- The C compiler identification is GNU 11.2.0
--- The CXX compiler identification is GNU 11.2.0
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/tudor/UBB/2_semester/DSA/lab_2/PriorityQueue_sll -B /Users/tudor/UBB/2_semester/DSA/lab_2/PriorityQueue_sll/cmake-build-debug
+-- The C compiler identification is AppleClang 15.0.0.15000040
+-- The CXX compiler identification is AppleClang 15.0.0.15000040
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/gcc.exe - skipped
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/g++.exe - skipped
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done
--- Generating done
--- Build files have been written to: D:/UBB/sem 2/DSA/labor 2/PriorityQueue sll/cmake-build-debug
+-- Configuring done (2.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/tudor/UBB/2_semester/DSA/lab_2/PriorityQueue_sll/cmake-build-debug
