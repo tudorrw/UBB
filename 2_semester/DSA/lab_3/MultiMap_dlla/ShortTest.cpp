@@ -14,7 +14,6 @@ void testAll() {
 	m.add(2, 600);
 	m.add(4, 800);
 
-
 	assert(m.size() == 6);
 
 	assert(m.remove(5, 600) == false);
@@ -40,8 +39,6 @@ void testAll() {
 	assert(im.valid() == false);
 	im.first();
 	assert(im.valid() == true);
-
-
 }
 
 void test_reverse(){

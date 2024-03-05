@@ -5,10 +5,10 @@
 
 using namespace std;
 
-//best case: theta(n) complexity, where represents n the given capacity
+//best case: theta(n) complexity, where represents the given capacity
 //average case: theta(n) complexity
 //worst case: theta(n) complexity
-//general complexity: theta(n);
+//general complexity: theta(n)
 MultiMap::MultiMap() {
     this->capacity_key = 6;
     this->size_keys = 0;
@@ -63,7 +63,6 @@ void MultiMap::add(TKey c, TValue v) {
         this->key_nodes[newKeyNode].value_nodes = new ValueNode[this->key_nodes[newKeyNode].capacity_value];
         for (int i = 0; i < key_nodes[newKeyNode].capacity_value - 1; i++) {
             key_nodes[newKeyNode].value_nodes[i].next_value = i + 1;
-            key_nodes[newKeyNode].value_nodes[i].prev_value = i - 1;
         }
         this->key_nodes[newKeyNode].size_values = 0;
         this->key_nodes[newKeyNode].value_nodes[this->key_nodes[newKeyNode].capacity_value - 1].next_value = -1;
@@ -82,7 +81,6 @@ void MultiMap::add(TKey c, TValue v) {
 
     // add the new value node to the values DLLA of the key node
     TValue previousValue = this->key_nodes[currentKey].tail_value;
-
 
     int newValueNode;
     if(this->key_nodes[currentKey].first_empty_value != -1){
@@ -150,7 +148,7 @@ void MultiMap::resizeUpValues(int currentKey) {
     this->key_nodes[currentKey].value_nodes = newValueNodes;
 }
 
-//best case: theta(1) Complexity; when the key and value are found at the head of the respective linked list
+//best case: theta(1) Complexity; when the key and value are found at the head of the resperctive linked list
 //worst case: theta(n); key and value are at the tail of their respective linked list or not present in the multimap(n - number of elems in the multimap)
 //average case: theta(n); depends on the distribution of the elements in the multimap
 //general complexity: O(n)
@@ -171,7 +169,6 @@ bool MultiMap::remove(TKey c, TValue v) {
         previousValue = currentValue;
         currentValue = this->key_nodes[currentKey].value_nodes[currentValue].next_value;
     }
-
     //if the value wasn't found
     if(currentValue == -1){
         return false;
@@ -185,7 +182,7 @@ bool MultiMap::remove(TKey c, TValue v) {
     }
 
     //link the next node with the previous node
-    if(this->key_nodes[currentKey].tail_value == currentValue){
+    if(this->key_nodes[currentKey].tail_value = currentValue){
         this->key_nodes[currentKey].tail_value = previousValue;
     }
 
@@ -194,10 +191,6 @@ bool MultiMap::remove(TKey c, TValue v) {
     this->key_nodes[currentKey].first_empty_value = currentValue;
     //decrease the size of the array of values for the given key
     this->key_nodes[currentKey].size_values--;
-
-    //Resizing down value nodes, but it has a small problem
-//    if(this->key_nodes[currentKey].size_values<this->key_nodes[currentKey].capacity_value/4 && this->key_nodes[currentKey].capacity_value>4)
-//        resize_down_values(currentKey);
 
     //in case the size of values array is empty
     if(this->key_nodes[currentKey].size_values == 0){
@@ -225,16 +218,6 @@ bool MultiMap::remove(TKey c, TValue v) {
         this->first_empty_keys = currentKey;
         //decrease the size of the array of values for the given key
         this->size_keys--;
-
-//        Resizing down key nodes, but it has a small problem
-//        if(this->size_keys<this->capacity_key/4 && this->capacity_key>4)
-//            resize_down_keys();
-
-        if (this->size_keys == 0)
-        {
-            this->head_key = -1;
-            this->tail_key = -1;
-        }
     }
     return true;
 }
@@ -242,7 +225,7 @@ bool MultiMap::remove(TKey c, TValue v) {
 
 
 //best case: theta(1) complexity
-//average case: worst case: O(n + m)
+//
 //worst case: O(n + m) where n represents the total number of keys and m represents the number of values for the searched key
 //occurs when the searched key is the last key and the second while loop will iterate through all m values associated with the given key
 //general complexity: O(n + m)
@@ -290,18 +273,56 @@ bool MultiMap::isEmpty() const {
     return this->size_keys == 0;
 }
 
-// best case: theta(1) complexity
-// average case: theta(1) complexity
-// worst case: theta(1) complexity
-// general complexity: theta(1) complexity
+
 MultiMapIterator MultiMap::iterator() const {
 	return MultiMapIterator(*this);
 }
 
+// best case: theta(n), where n represents the number of keys(and the capacity of the multimap)
+// average case: theta(n)
+// worst case: theta(n)
+//general complexity: theta(n);
+void MultiMap::resizeDownKeys() {
+
+    int new_capacity = capacity_key / 2;
+    if (new_capacity < 2) {
+        new_capacity = 2;
+    }
+
+    KeyNode* new_key_nodes = new KeyNode[new_capacity];
+
+    for (int i = 0; i < new_capacity; i++) {
+        new_key_nodes[i].next_key = i + 1;
+        new_key_nodes[i].prev_key = i - 1;
+    }
+
+    int current_key = head_key;
+    int index = 0;
+    while (current_key != -1 && index < new_capacity) {
+        new_key_nodes[index] = key_nodes[current_key];
+        new_key_nodes[index].prev_key = index - 1;
+        new_key_nodes[index].next_key = index + 1;
+        current_key = key_nodes[current_key].next_key;
+        index++;
+    }
+    new_key_nodes[0].prev_key = -1;
+    new_key_nodes[new_capacity - 1].next_key = -1;
+
+    delete[] key_nodes;
+    key_nodes = new_key_nodes;
+    capacity_key = new_capacity;
+    first_empty_keys = size_keys;
+    head_key = 0;
+    if (size_keys == 0) {
+        tail_key = -1;
+        head_key = -1;
+    } else {
+        tail_key = size_keys - 1;
+    }
+}
 
 
-
-//best case, average, worst, theta(n*m), n number of keys, m number of values
+//best case, average, theta(n*m)
 void MultiMap::print_multimap() {
     int currentKey = this->head_key;
     while(currentKey != -1){
@@ -316,72 +337,7 @@ void MultiMap::print_multimap() {
     }
 }
 
-// best case: theta(n) complexity, n number of keys
-// average case: theta(n) complexity
-// worst case: theta(n) complexity
-// general complexity: theta(n) complexity
-MultiMap::~MultiMap() {
-    int current=this->head_key;
-    while(current!=-1)
-    {
-        delete[] this->key_nodes[current].value_nodes;
-        current=this->key_nodes[current].next_key;
-    }
-    delete[] this->key_nodes;
-    this->key_nodes = nullptr;
-    this->capacity_key = 0;
-    this->size_keys = 0;
-    this->head_key = -1;
-}
-
-// best case: theta(n) complexity
-// average case: theta(n) complexity
-// worst case: theta(n) complexity
-// general complexity: theta(n) complexity
-void MultiMap::resize_down_keys() {
-
-    int new_capacity = this->capacity_key / 2;
-    if (new_capacity < 2) {
-        new_capacity = 2;
-    }
-
-    KeyNode* new_key_nodes = new KeyNode[new_capacity];
-
-    for (int i = 0; i < new_capacity; i++) {
-        new_key_nodes[i].next_key = i + 1;
-        new_key_nodes[i].prev_key = i - 1;
-    }
-
-    int current_key = this->head_key;
-    int index = 0;
-    while (current_key != -1 && index < new_capacity) {
-        new_key_nodes[index] = this->key_nodes[current_key];
-        new_key_nodes[index].prev_key = index - 1;
-        new_key_nodes[index].next_key = index + 1;
-        current_key = this->key_nodes[current_key].next_key;
-        index++;
-    }
-    new_key_nodes[0].prev_key = -1;
-    new_key_nodes[new_capacity - 1].next_key = -1;
-
-    delete[] this->key_nodes;
-    this->key_nodes = new_key_nodes;
-    this->capacity_key = new_capacity;
-    this->first_empty_keys = this->size_keys;
-    this->head_key = 0;
-    if (this->size_keys == 0) {
-        this->tail_key = -1;
-        this->head_key = -1;
-    } else {
-        this->tail_key = this->size_keys - 1;
-    }
-}
-
-// best case: theta(n) complexity
-// average case: theta(n) complexity
-// worst case: theta(n) complexity
-// general complexity: theta(n) complexity
-void MultiMap::resize_down_values(int key) {
+void MultiMap::resizeDownValues(int key) {
 
     int new_capacity = key_nodes[key].capacity_value / 2;
     if (new_capacity < 2) {
@@ -395,36 +351,114 @@ void MultiMap::resize_down_values(int key) {
         new_value_nodes[i].prev_value = i - 1;
     }
 
-    int current_value = this->key_nodes[key].head_value;
+    int current_value = key_nodes[key].head_value;
     int index = 0;
     while (current_value != -1 && index < new_capacity) {
-        new_value_nodes[index] = this->key_nodes[key].value_nodes[current_value];
+        new_value_nodes[index] = key_nodes[key].value_nodes[current_value];
         new_value_nodes[index].prev_value = index - 1;
         new_value_nodes[index].next_value = index + 1;
-        current_value = this->key_nodes[key].value_nodes[current_value].next_value;
+        current_value = key_nodes[key].value_nodes[current_value].next_value;
         index++;
     }
     new_value_nodes[0].prev_value = -1;
     new_value_nodes[new_capacity - 1].next_value = -1;
 
-    delete[] this->key_nodes[key].value_nodes;
-    this->key_nodes[key].value_nodes = new_value_nodes;
-    this->key_nodes[key].capacity_value = new_capacity;
-    this->key_nodes[key].first_empty_value = key_nodes[key].size_values;
-    this->key_nodes[key].head_value = 0;
+    delete[] key_nodes[key].value_nodes;
+    key_nodes[key].value_nodes = new_value_nodes;
+    key_nodes[key].capacity_value = new_capacity;
+    key_nodes[key].first_empty_value = key_nodes[key].size_values;
+    key_nodes[key].head_value = 0;
 
-    if (this->key_nodes[key].size_values == 0) {
-        this->key_nodes[key].tail_value = -1;
-        this->key_nodes[key].head_value=-1;
+    if (key_nodes[key].size_values == 0) {
+        key_nodes[key].tail_value = -1;
+        key_nodes[key].head_value=-1;
     } else {
-        this->key_nodes[key].tail_value = this->key_nodes[key].size_values - 1;
+        tail_key = size_keys - 1;
+    }
+}
+
+void MultiMap::reverse() {
+    //pre: map is a valid map
+    //post: reversed keys in the multimap
+    TKey left = this->head_key;
+    TKey right = this->tail_key;
+    while(left<right){
+        int aux = this->key_nodes[left].key;
+        this->key_nodes[left].key = this->key_nodes[right].key;
+        this->key_nodes[right].key = aux;
+
+        ValueNode *auxnodes = this->key_nodes[left].value_nodes;
+        this->key_nodes[left].value_nodes = this->key_nodes[right].value_nodes;
+        this->key_nodes[right].value_nodes = auxnodes;
+
+        //swap value capacity
+        int aux_capacity=this->key_nodes[left].capacity_value;
+        this->key_nodes[left].capacity_value=this->key_nodes[right].capacity_value;
+        this->key_nodes[right].capacity_value=aux_capacity;
+
+        //swap head value
+        int aux_head_value=this->key_nodes[left].head_value;
+        this->key_nodes[left].head_value=this->key_nodes[right].head_value;
+        this->key_nodes[right].head_value=aux_head_value;
+
+        //swap tail value
+        int aux_tail_value=this->key_nodes[left].tail_value;
+        this->key_nodes[left].tail_value=this->key_nodes[right].tail_value;
+        this->key_nodes[right].tail_value=aux_tail_value;
+        //swap first empty
+        int first_empty_aux = this->key_nodes[left].first_empty_value;
+        this->key_nodes[left].first_empty_value = this->key_nodes[right].first_empty_value;
+        this->key_nodes[right].first_empty_value = first_empty_aux;
+
+        //swap size
+        int size_aux = this->key_nodes[left].size_values;
+        this->key_nodes[left].size_values = this->key_nodes[right].size_values;
+        this->key_nodes[right].size_values = size_aux;
+
+        if(left != right) {
+            reverse_value_nodes(left);
+            reverse_value_nodes(right);
+        }
+        left = this->key_nodes[left].next_key;
+        right = this->key_nodes[right].prev_key;
+    }
+}
+
+void MultiMap::reverse_value_nodes(int key) {
+    //pre: map is a valid map, key is a given key
+    //post: reversed values in the key array
+    int left=this->key_nodes[key].head_value;
+    int right=this->key_nodes[key].tail_value;
+
+    while(left<right) {
+        //swap value;
+        TValue aux = this->key_nodes[key].value_nodes[left].value;
+        this->key_nodes[key].value_nodes[left].value = this->key_nodes[key].value_nodes[right].value;
+        this->key_nodes[key].value_nodes[right].value = aux;
+
+        left=this->key_nodes[key].value_nodes[left].next_value;
+        right=this->key_nodes[key].value_nodes[right].next_value;
     }
 }
 
 
-//pre: map is a valid map
-//post: reversed values in the key array
-//Complexity best, worst, average, total theta(n/2*m/2), n number of keys, m number of values
+//best case: theta(n) complexity
+//average case: theta(n) complexity
+//worst case: theta(n) complexity
+MultiMap::~MultiMap() {
+    int current=this->head_key;
+    while(current!=-1)
+    {
+        delete[] this->key_nodes[current].value_nodes;
+        current = this->key_nodes[current].next_key;
+    }
+    delete[] key_nodes;
+    key_nodes = nullptr;
+    capacity_key = 0;
+    size_keys = 0;
+    head_key = -1;
+}
+
 /**
 * function reverse(dlla) is:
     //pre: map is a valid map
@@ -454,7 +488,6 @@ void MultiMap::resize_down_values(int key) {
         aux_tail_value <- dlla.key_nodes[left].tail_value;
         dlla.key_nodes[left].tail_value <- dlla.key_nodes[right].tail_value;
         dlla.key_nodes[right].tail_value <- aux_tail_value;
-
         //swap first empty
         first_empty_aux = dlla.key_nodes[left].first_empty_value;
         dlla.key_nodes[left].first_empty_value <- this->key_nodes[right].first_empty_value;
@@ -465,75 +498,15 @@ void MultiMap::resize_down_values(int key) {
         dlla.key_nodes[left].size_values <- dlla.key_nodes[right].size_values;
         this->key_nodes[right].size_values <- size_aux;
 
-        //iterate through value array
         left <- dlla.key_nodes[left].next_key;
         right <- dlla.key_nodes[right].prev_key;
 */
-void MultiMap::reverse(){
-
-    //start from head and tail of the dlla
-    int left=this->head_key;
-    int right=this->tail_key;
-
-    while(left<=right){
-        //swap keys;
-        TKey aux=this->key_nodes[left].key;
-        this->key_nodes[left].key=this->key_nodes[right].key;
-        this->key_nodes[right].key=aux;
-
-        //swap value arrays;
-        ValueNode* auxnodes=this->key_nodes[left].value_nodes;
-        this->key_nodes[left].value_nodes=this->key_nodes[right].value_nodes;
-        this->key_nodes[right].value_nodes=auxnodes;
-
-        //swap value capacity
-        int aux_capacity=this->key_nodes[left].capacity_value;
-        this->key_nodes[left].capacity_value=this->key_nodes[right].capacity_value;
-        this->key_nodes[right].capacity_value=aux_capacity;
-
-        //swap head value
-        int aux_head_value=this->key_nodes[left].head_value;
-        this->key_nodes[left].head_value=this->key_nodes[right].head_value;
-        this->key_nodes[right].head_value=aux_head_value;
-
-        //swap tail value
-        int aux_tail_value=this->key_nodes[left].tail_value;
-        this->key_nodes[left].tail_value=this->key_nodes[right].tail_value;
-        this->key_nodes[right].tail_value=aux_tail_value;
-
-        //swap firsy_empty_value
-        int first_empty_aux = this->key_nodes[left].first_empty_value;
-        this->key_nodes[left].first_empty_value = this->key_nodes[right].first_empty_value;
-        this->key_nodes[right].first_empty_value = first_empty_aux;
-
-        //swap size_value
-        int size_aux = this->key_nodes[left].size_values;
-        this->key_nodes[left].size_values = this->key_nodes[right].size_values;
-        this->key_nodes[right].size_values = size_aux;
-
-        //inversing the nodes
-        if(left==right)
-            reverse_value_nodes(left);
-        else
-        {
-            reverse_value_nodes(left);
-            reverse_value_nodes(right);
-        }
-
-        //advance to the next keys
-        left=this->key_nodes[left].next_key;
-        right=this->key_nodes[right].prev_key;
-    }
 
 
-
-}
-
-//pre cond the map must be valid dlla value array must be valid, and key is valid
-//post cond the value nodes are reversed
-//Complexity best, worst, average, total theta(m/2), m number of values
 /**
 * function reverse_value_nodes(dlla_map, dlla_key, key) is:
+    //pre: map is a valid map, key is a given key
+    //post: reversed values in the key array
     left <- dlla.key_nodes[key].head_value
     right <- dlla.key_nodes[key].tail_value
 
@@ -543,27 +516,8 @@ void MultiMap::reverse(){
         dlla_map.key_nodes[key].dlla_key.value_nodes[left].value <- dlla_map.key_nodes[key].dlla_key.value_nodes[right].value
         dlla_map.key_nodes[key].dlla_key.value_nodes[right].value <- aux
 
-        //iterate through value array
+        //iterate through key array
         left <- dlla_map.key_nodes[key].dlla_key.value_nodes[left].next_value
         right <- dlla_map.key_nodes[key].dlla_key.value_nodes[right].next_value
 
 */
-void MultiMap::reverse_value_nodes(int key){
-    //start from head and tail of the dlla for values
-    int left=this->key_nodes[key].head_value;
-    int right=this->key_nodes[key].tail_value;
-
-    while(left<right) {
-        //swap value;
-        TValue aux = this->key_nodes[key].value_nodes[left].value;
-        this->key_nodes[key].value_nodes[left].value = this->key_nodes[key].value_nodes[right].value;
-        this->key_nodes[key].value_nodes[right].value = aux;
-
-        //advance to the next values;
-        left=this->key_nodes[key].value_nodes[left].next_value;
-        right=this->key_nodes[key].value_nodes[right].next_value;
-    }
-
-
-
-}

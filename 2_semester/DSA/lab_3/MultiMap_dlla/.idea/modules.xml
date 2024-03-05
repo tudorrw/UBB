@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MultiMapLab3Final.iml" filepath="$PROJECT_DIR$/.idea/MultiMapLab3Final.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MultiMap.iml" filepath="$PROJECT_DIR$/.idea/MultiMap.iml" />
     </modules>
   </component>
 </project>

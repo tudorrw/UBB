@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MultiMapLab3Final.exe"
+			"path" : "MultiMap.exe"
 		},
 		{
-			"path" : "MultiMapLab3Final.pdb"
+			"path" : "MultiMap.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -55,7 +55,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Tudor/UBB2/sem 2/DSA/labor 3/MultiMapLab3Final/MultiMapLab3Final"
+					"path" : "D:/UBB/sem 2/DSA/labor 3/MultiMap/."
 				}
 			],
 			"language" : "CXX",
@@ -77,7 +77,7 @@
 			]
 		}
 	],
-	"id" : "MultiMapLab3Final::@6890427a1f51a3e7e1df",
+	"id" : "MultiMap::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -97,8 +97,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "MultiMapLab3Final",
-	"nameOnDisk" : "MultiMapLab3Final.exe",
+	"name" : "MultiMap",
+	"nameOnDisk" : "MultiMap.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -133,51 +133,51 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "MultiMapLab3Final/App.cpp",
+			"path" : "App.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "MultiMapLab3Final/ExtendedTest.cpp",
+			"path" : "ExtendedTest.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "MultiMapLab3Final/ExtendedTest.h",
+			"path" : "ExtendedTest.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "MultiMapLab3Final/MultiMap.cpp",
+			"path" : "MultiMap.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "MultiMapLab3Final/MultiMap.h",
+			"path" : "MultiMap.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "MultiMapLab3Final/MultiMapIterator.cpp",
+			"path" : "MultiMapIterator.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "MultiMapLab3Final/MultiMapIterator.h",
+			"path" : "MultiMapIterator.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "MultiMapLab3Final/ShortTest.cpp",
+			"path" : "ShortTest.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "MultiMapLab3Final/ShortTest.h",
+			"path" : "ShortTest.h",
 			"sourceGroupIndex" : 1
 		}
 	],

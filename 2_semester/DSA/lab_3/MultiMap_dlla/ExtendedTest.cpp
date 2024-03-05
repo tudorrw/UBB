@@ -108,7 +108,6 @@ void testRemove() {
 	for (int i = -100; i < 100; i = i + 2) { 
 		m.add(i, i);
 	}
-
 	for (int i = -100; i < 100; i++) { 
 
 		if (i % 2 == 0) {
@@ -121,7 +120,6 @@ void testRemove() {
 		}
 	}
 	assert(m.size() == 0);
-
 	for(int i = 0; i <= 100; i++)
         m.add(0, i);
     m.add(1, 100);

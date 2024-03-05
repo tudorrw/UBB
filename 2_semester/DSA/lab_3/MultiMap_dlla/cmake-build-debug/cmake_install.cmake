@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Tudor/UBB2/sem 2/DSA/labor 3/MultiMapLab3Final
+# Install script for directory: D:/UBB/sem 2/DSA/labor 3/MultiMap
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/MultiMapLab3Final")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/MultiMap")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Tudor/UBB2/sem 2/DSA/labor 3/MultiMapLab3Final/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/UBB/sem 2/DSA/labor 3/MultiMap/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

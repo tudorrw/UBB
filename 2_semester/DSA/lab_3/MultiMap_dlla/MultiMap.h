@@ -42,7 +42,7 @@ class MultiMap
 	friend class MultiMapIterator;
 
 private:
-
+	//TODO - Representation
     //attributes for keys DLLA
     int head_key;
     int tail_key;
@@ -77,17 +77,18 @@ public:
 
     void resizeUpValues(int currentKey);
 
+    void resizeDownKeys();
+
+    void resizeDownValues(int key);
+
+    void reverse();
+
+    void reverse_value_nodes(int key);
+
     void print_multimap();
 	//destructor
 	~MultiMap();
 
-    void resize_down_values(int key);
 
-    void resize_down_keys();
-
-    void reverse();
-
-
-    void reverse_value_nodes(int key);
 };
 

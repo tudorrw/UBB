@@ -9,6 +9,7 @@ class MultiMapIterator
 
 private:
 	const MultiMap& col;
+	//TODO - Representation
     int keyIndex;
     int valueIndex;
 	MultiMapIterator(const MultiMap& c);

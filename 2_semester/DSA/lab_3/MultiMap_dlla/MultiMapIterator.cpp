@@ -6,7 +6,12 @@
 // worst case: theta(1) complexity
 MultiMapIterator::MultiMapIterator(const MultiMap& c): col(c) {
     this->keyIndex = this->col.head_key;
-    this->valueIndex = this->col.key_nodes[this->keyIndex].head_value;
+    if(this->keyIndex != -1){
+        this->valueIndex = this->col.key_nodes[this->keyIndex].head_value;
+    }
+    else{
+        this->valueIndex = -1;
+    }
 }
 
 //best case: theta(1) complexity
@@ -51,6 +56,11 @@ void MultiMapIterator::next() {
 // general complexity: theta(1) complexity
 void MultiMapIterator::first() {
     this->keyIndex = this->col.head_key;
-    this->valueIndex = this->col.key_nodes[this->keyIndex].head_value;
+    if(this->keyIndex != -1){
+        this->valueIndex = this->col.key_nodes[this->keyIndex].head_value;
+    }
+    else{
+        this->valueIndex = -1;
+    }
 }
 

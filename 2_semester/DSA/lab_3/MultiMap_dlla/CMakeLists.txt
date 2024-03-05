@@ -1,17 +1,17 @@
 cmake_minimum_required(VERSION 3.24)
-project(MultiMapLab3Final)
+project(MultiMap)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(MultiMapLab3Final)
+include_directories(.)
 
-add_executable(MultiMapLab3Final
-        MultiMapLab3Final/App.cpp
-        MultiMapLab3Final/ExtendedTest.cpp
-        MultiMapLab3Final/ExtendedTest.h
-        MultiMapLab3Final/MultiMap.cpp
-        MultiMapLab3Final/MultiMap.h
-        MultiMapLab3Final/MultiMapIterator.cpp
-        MultiMapLab3Final/MultiMapIterator.h
-        MultiMapLab3Final/ShortTest.cpp
-        MultiMapLab3Final/ShortTest.h)
+add_executable(MultiMap
+        App.cpp
+        ExtendedTest.cpp
+        ExtendedTest.h
+        MultiMap.cpp
+        MultiMap.h
+        MultiMapIterator.cpp
+        MultiMapIterator.h
+        ShortTest.cpp
+        ShortTest.h)
