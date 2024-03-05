@@ -1,0 +1,2 @@
+Patrone(tintenstand = 30, farbe = rot)
+Patrone(tintenstand = 70, farbe = blau)

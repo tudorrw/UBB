@@ -1,0 +1,9 @@
+Ioan,Pop,Fundamentals of programming,9
+Gheorghe,Dima,Advanced programming,10
+Alexandra,Galatan,Advanced programming,10
+Maria,Popescu,Advanced programming,9
+Shakira,Shakira,Vocal Training,10
+Paul,Pop,Advanced programming,5
+Johnny,Depp,Acting 101,10
+Marian,Stanescu,Advanced programming,7
+Vasile,Avram,Advanced programming,8
