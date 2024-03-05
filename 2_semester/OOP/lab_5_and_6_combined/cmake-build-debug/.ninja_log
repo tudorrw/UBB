@@ -1,0 +1,14 @@
+# ninja log v5
+651	923	7074788232913457	L5_TeamCCB.exe	30b796ac1aab028d
+8	611	7313778851455309	CMakeFiles/lab_5_and_6_combined.dir/Domain.cpp.obj	f1f10c5f52f93b73
+22	872	7313778854060849	CMakeFiles/lab_5_and_6_combined.dir/main.cpp.obj	bd1123de96a45dd
+12	896	7313778854300849	CMakeFiles/lab_5_and_6_combined.dir/UI.cpp.obj	68f89b7f17031d99
+4	932	7313778854660846	CMakeFiles/lab_5_and_6_combined.dir/CSVRepository.cpp.obj	1a2f228ffc61a941
+0	1005	7313778855386019	CMakeFiles/lab_5_and_6_combined.dir/Controller.cpp.obj	4ea474196edc7c13
+17	1116	7313778856461332	CMakeFiles/lab_5_and_6_combined.dir/InMemoryRepository.cpp.obj	dc76327f9401ce1f
+26	1131	7313778856641318	CMakeFiles/lab_5_and_6_combined.dir/Unit_Tests.cpp.obj	99b771c170a76166
+1132	1396	7313778859276764	lab_5_and_6_combined.exe	bf51886eff9ec2a3
+3	636	7313779545688165	CMakeFiles/lab_5_and_6_combined.dir/main.cpp.obj	bd1123de96a45dd
+636	921	7313779548500411	lab_5_and_6_combined.exe	bf51886eff9ec2a3
+3	698	7313779931311097	CMakeFiles/lab_5_and_6_combined.dir/main.cpp.obj	bd1123de96a45dd
+698	984	7313779934145897	lab_5_and_6_combined.exe	bf51886eff9ec2a3

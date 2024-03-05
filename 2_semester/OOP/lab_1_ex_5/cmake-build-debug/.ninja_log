@@ -1,0 +1,5 @@
+# ninja log v5
+384	512	7313769491906860	L1_Ciobanu_Tudor_Problem5_cpp.exe	64e8bc4ba1b9a6f6
+23	373	7313771949540585	build.ninja	60a96b24f7d6c249
+1	325	7313772018737965	CMakeFiles/lab_1_ex_5.dir/main.cpp.obj	c69bb6df110e2fe
+327	428	7313772019739052	lab_1_ex_5.exe	ff0a62fe30cac5de

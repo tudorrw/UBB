@@ -1,0 +1,8 @@
+# ninja log v5
+3	467	7313776855132702	CMakeFiles/L4_Ciobanu_Tudor.dir/Fruit.cpp.obj	3bce127e70dea5f2
+17	716	7313776857618341	CMakeFiles/L4_Ciobanu_Tudor.dir/FruitUI.cpp.obj	800afdae796a3f88
+26	747	7313776857928325	CMakeFiles/L4_Ciobanu_Tudor.dir/Shop.cpp.obj	f6e631223c990269
+11	726	7313776857718351	CMakeFiles/L4_Ciobanu_Tudor.dir/FruitTest.cpp.obj	9d7db4cc151ed3db
+936	1080	7313776861233975	L4_Ciobanu_Tudor.exe	45c3013f0139652b
+21	769	7313776858148340	CMakeFiles/L4_Ciobanu_Tudor.dir/FruitRepo.cpp.obj	4f7fbb280c067ac8
+7	936	7313776859828709	CMakeFiles/L4_Ciobanu_Tudor.dir/FruitController.cpp.obj	f1fcc21aa73a397
