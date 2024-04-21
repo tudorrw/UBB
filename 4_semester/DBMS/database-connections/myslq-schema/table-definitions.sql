@@ -97,3 +97,32 @@ create table festivalOrganisers
         foreign key (organiserId) references organisers (id)
 );
 
+-- auto-generated definition
+create table users
+(
+    id       int auto_increment
+        primary key,
+    login    varchar(45)  not null,
+    email    varchar(45)  null,
+    password varchar(256) not null,
+    constraint user_pk2
+        unique (login)
+);
+
+
+
+create table tickets
+(
+    id            int auto_increment
+        primary key,
+    festivalId    int         not null,
+    userId        int         not null,
+    ticketType    varchar(45) not null,
+    price         int         not null,
+    purchaseDate  date        null,
+    paymentMethod varchar(45) not null,
+    constraint tickets_festivals_id_fk
+        foreign key (festivalId) references festivals (id),
+    constraint tickets_users_id_fk
+        foreign key (userId) references users (id)
+);
