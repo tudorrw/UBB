@@ -1,3 +1,0 @@
-C:/Users/Tudor/UBB/2_semester/DSA/lab_2/Map_sll/cmake-build-debug/CMakeFiles/Map_sll.dir
-C:/Users/Tudor/UBB/2_semester/DSA/lab_2/Map_sll/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Tudor/UBB/2_semester/DSA/lab_2/Map_sll/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,7 +1,0 @@
-# ninja log v5
-3	82	7051879417644127	CMakeFiles/Bag_sll.dir/BagIterator.cpp.obj	b3634f453aa3d49c
-7	352	7051871892405091	CMakeFiles/Bag_sll.dir/ShortTest.cpp.obj	689f3807eb6cab68
-5	400	7051859166386273	CMakeFiles/Bag_sll.dir/App.cpp.obj	e17c15fe5950e492
-432	546	7051925878783033	Bag_sll.exe	92cf8eca8713fa16
-3	326	7051877768175448	CMakeFiles/Bag_sll.dir/Bag.cpp.obj	9800ca5cd13ee0e6
-3	432	7051925877673051	CMakeFiles/Bag_sll.dir/ExtendedTest.cpp.obj	820a2d49db12a7b8

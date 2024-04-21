@@ -1,3 +1,3 @@
-D:/UBB/sem 2/DSA/labor 3/MultiMap/cmake-build-debug/CMakeFiles/MultiMap.dir
-D:/UBB/sem 2/DSA/labor 3/MultiMap/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/UBB/sem 2/DSA/labor 3/MultiMap/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/tudor/UBB/2_semester/DSA/lab_3/MultiMap_dlla/cmake-build-debug/CMakeFiles/MultiMap.dir
+/Users/tudor/UBB/2_semester/DSA/lab_3/MultiMap_dlla/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/tudor/UBB/2_semester/DSA/lab_3/MultiMap_dlla/cmake-build-debug/CMakeFiles/rebuild_cache.dir
