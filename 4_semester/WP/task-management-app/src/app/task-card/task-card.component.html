@@ -1,0 +1,16 @@
+<div class="card" cdkDrag [id]="task?.id">
+  <div class="card-header">
+    {{ task?.title }}
+  </div>
+  <div class="card-body">
+    <div class="card-description">
+      <p class="card-text">{{ task?.description }}</p>
+      <p class="card-text">Priority: {{ task?.priority }}</p>
+      <p class="card-text">Category: {{ task?.category }}</p>
+      <p class="card-text">Due Date: {{ task?.dueDate }}</p>
+    </div>
+    <div class="button-container">
+      <button class="btn" (click)="deleteTask(task?.id || '')">Delete Task</button>
+    </div>
+  </div>
+</div>

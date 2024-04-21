@@ -1,0 +1,41 @@
+.task-popup-content {
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-popup-header {
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #53cae2;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  word-wrap: break-word;
+}
+
+.task-popup-body {
+  padding: 20px;
+  border: 2px solid #53cae2;
+  border-radius: 8px;
+}
+
+.task-popup-body p {
+  margin: 8px 0;
+}
+
+.exit-button {
+  display: grid;
+}
+
+.mat-dialog-actions button {
+  color: #aa8dbf;
+  font-weight: bold;
+}
+
+.mat-dialog-actions button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

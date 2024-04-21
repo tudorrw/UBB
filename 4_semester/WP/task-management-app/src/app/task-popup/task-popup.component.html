@@ -1,0 +1,14 @@
+<div mat-dialog-content class="task-popup-content">
+  <div class="task-popup-header">
+    <p>{{ data.task.title }}</p>
+  </div>
+  <div class="task-popup-body">
+    <p><strong>Description:</strong> {{ data.task.description }}</p>
+    <p><strong>Category:</strong> {{ data.task.category }}</p>
+    <p><strong>Priority:</strong> {{ data.task.priority }}</p>
+    <p><strong>Stage:</strong> {{ data.task.stage }}</p>
+  </div>
+  <div class="exit-button">
+    <button mat-button [mat-dialog-close]="true">Exit</button>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class='calendar'>
+  <div class='calendar-sidebar'>
+    <a mat-stroked-button href="/dashboard">Dashboard</a>
+    <div class='calendar-sidebar-section'>
+      <label>
+        <input type='checkbox' [checked]='calendarVisible' (change)='handleCalendarToggle()' />
+        toggle whole calendar
+      </label>
+    </div>
+    <div class='calendar-sidebar-section'>
+      <label>
+        <input type='checkbox' [checked]='calendarOptions.weekends' (change)='handleWeekendsToggle()' />
+        toggle weekends
+      </label>
+    </div>
+    <div class='calendar-sidebar-section'>
+      <h2>All Events ({{currentTasks().length}})</h2>
+      <ul>
+        <li *ngFor='let event of currentTasks()'>
+          <b>{{event.title}}</b>
+          <i>{{event.start}}</i>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='calendar-main'>
+    <full-calendar *ngIf='calendarVisible' [options]='calendarOptions'></full-calendar>
+  </div>
+
+
+</div>

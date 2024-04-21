@@ -1,0 +1,102 @@
+.task-popup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.popup-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #2196F3;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  color: #333;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-label {
+  color: #333;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: #f44336;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-placeholder {
+  color: #f44336;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-container button {
+  width: 45%;
+}
+
+
+.work-category {
+  background-color: #f5f5f5;
+  /* Light gray for work category */
+}
+
+.personal-category {
+  background-color: #e0f2f1;
+  /* Light blue for personal category */
+}
+
+.study-category {
+  background-color: #fff3e0;
+  /* Light orange for study category */
+}
+
+.home-category {
+  background-color: #fce4ec;
+  /* Light pink for home category */
+}
+
+
+
+.form-field {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  /* Add a transparent border */
+  border-radius: 10px;
+  /* Increase the border-radius for rounded corners */
+}
+
+.low-priority {
+  border: 2px solid #00c853;
+  /* Green border for low priority */
+  border-width: 2px;
+}
+
+.medium-priority {
+  border: 2px solid #ffc400;
+  /* Amber border for medium priority */
+  border-width: 2px;
+}
+
+.high-priority {
+  border: 2px solid #ff7043;
+  /* Orange border for high priority */
+  border-width: 2px;
+}
+
+.critical-priority {
+  border: 2px solid #d32f2f;
+  /* Red border for critical priority */
+  border-width: 2px;
+}

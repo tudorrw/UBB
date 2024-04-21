@@ -1,0 +1,31 @@
+.google-card-container {
+    padding: 16px 11px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    color: rgb(62, 62, 62);
+    cursor: pointer;
+    font-family: bold;
+
+    img {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+    }
+}
+
+.login-google-message {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}

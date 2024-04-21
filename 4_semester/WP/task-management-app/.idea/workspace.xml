@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04a47f79-38a3-4dc8-ab8c-89c53735bd08" name="Changes" comment="final styling">
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/task-management-app/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/task-management-app/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat_auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat_auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat_auth.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat_auth.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat_firestore.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_fire_compat_firestore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_datepicker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_datepicker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_dialog.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_dialog.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_divider.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_divider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_divider.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_divider.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_form-field.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_form-field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_icon.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_icon.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_input.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_select.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_select.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_snack-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_snack-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_snack-bar.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_material_snack-bar.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_platform-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_platform-browser_animations_async.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_platform-browser_animations_async.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_platform-browser_animations_async.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_platform-browser_animations_async.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@angular_router.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_angular.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_angular.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_angular.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_angular.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_daygrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_daygrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_interaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_interaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_timegrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/@fullcalendar_timegrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/firebase_auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/firebase_auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/rxjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.3.3/vite/deps/rxjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ansi-html.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ansi-html.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/autoprefixer.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/autoprefixer.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/browserslist.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/cssesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/errno.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/errno.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esbuild.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esbuild.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esparse.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esparse.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esvalidate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esvalidate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/flat.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/flat.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/image-size.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/image-size.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/installed-package-contents.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/installed-package-contents.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/is-docker.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/is-docker.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jiti.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jiti.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/js-yaml.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jsesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json5.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/karma.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/karma.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/lessc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/lessc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mkdirp.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/multicast-dns.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/multicast-dns.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nanoid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nanoid.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/needle.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/needle.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ng-xi18n.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ng-xi18n.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ng.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ng.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ngc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ngc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ngcc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ngcc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-optional.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-optional.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-test.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-test.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nopt.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nopt.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/pacote.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/pacote.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/parser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/proto-loader-gen-types.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/proto-loader-gen-types.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/regjsparser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/regjsparser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/resolve.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/resolve.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rollup.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rollup.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sass.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sass.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/terser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tree-kill.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tree-kill.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsserver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsserver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/update-browserslist-db.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/update-browserslist-db.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uuid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uuid.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/vite.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/vite.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/webpack.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/preset-env/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/preset-env/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@esbuild/win32-x64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@esbuild/win32-x64/esbuild.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@esbuild/win32-x64/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/git/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/git/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/package-json/node_modules/.bin/glob.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/package-json/node_modules/.bin/glob.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/promise-spawn/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/promise-spawn/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/run-script/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@npmcli/run-script/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@rollup/rollup-win32-x64-msvc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@rollup/rollup-win32-x64-msvc/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@rollup/rollup-win32-x64-msvc/rollup.win32-x64-msvc.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cacache/node_modules/.bin/glob.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cacache/node_modules/.bin/glob.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cosmiconfig/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cosmiconfig/node_modules/.bin/js-yaml.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cross-spawn/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cross-spawn/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/istanbul-lib-instrument/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/istanbul-lib-instrument/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/less/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/less/node_modules/.bin/mime.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/less/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/less/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nice-napi/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/nice_napi.node.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/nice_napi.node.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/nothing.a.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/nothing.a.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/obj.target/nice_napi.node.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/obj.target/nice_napi/binding.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/obj.target/nice_napi/binding.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/obj.target/node_modules/node-addon-api/nothing.a.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/.deps/Release/obj.target/nothing/node_modules/node-addon-api/nothing.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/nothing.a" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/nothing.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/obj.target/nice_napi.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/obj.target/nice_napi/binding.o" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/obj.target/nice_napi/binding.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/obj.target/node_modules/node-addon-api/nothing.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/Release/obj.target/nothing/node_modules/node-addon-api/nothing.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/nice_napi.target.mk" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nice-napi/build/nice_napi.target.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nice-napi/build/node_modules/node-addon-api/nothing.target.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-gyp/node_modules/.bin/glob.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-gyp/node_modules/.bin/glob.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-gyp/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-gyp/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/read-package-json/node_modules/.bin/glob.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/read-package-json/node_modules/.bin/glob.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/regjsparser/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/regjsparser/node_modules/.bin/jsesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/send/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/send/node_modules/.bin/mime.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tar/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tar/node_modules/.bin/mkdirp.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vite/node_modules/.bin/esbuild.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vite/node_modules/.bin/esbuild.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vite/node_modules/@esbuild/win32-x64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vite/node_modules/@esbuild/win32-x64/esbuild.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vite/node_modules/@esbuild/win32-x64/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vite/node_modules/esbuild/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/vite/node_modules/esbuild/bin/esbuild" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tudorrw&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tudorrw/task-management-app.git&quot;,
+    &quot;accountId&quot;: &quot;3a0a1070-c067-41b6-a74d-8c0bfc503331&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2excNeW2edQuqqvkvX8tYwpz4GU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/tudor/Ubb_Stuff/4_semester/WP/task-management-app/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04a47f79-38a3-4dc8-ab8c-89c53735bd08" name="Changes" comment="" />
+      <created>1712849631849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712849631849</updated>
+      <workItem from="1712849633196" duration="673000" />
+      <workItem from="1712862533758" duration="6823000" />
+      <workItem from="1713625973164" duration="92000" />
+    </task>
+    <task id="LOCAL-00001" summary="add tasks as events on calendar">
+      <option name="closed" value="true" />
+      <created>1712864671414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712864671414</updated>
+    </task>
+    <task id="LOCAL-00002" summary="create popup and add it when clicking on calendar event">
+      <option name="closed" value="true" />
+      <created>1712880383484</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712880383484</updated>
+    </task>
+    <task id="LOCAL-00003" summary="made syling changes in dashboard(and card) and calendar(and popup)">
+      <option name="closed" value="true" />
+      <created>1712883708792</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712883708792</updated>
+    </task>
+    <task id="LOCAL-00004" summary="final styling">
+      <option name="closed" value="true" />
+      <created>1712908406574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712908406574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add tasks as events on calendar" />
+    <MESSAGE value="create popup and add it when clicking on calendar event" />
+    <MESSAGE value="made syling changes in dashboard(and card) and calendar(and popup)" />
+    <MESSAGE value="final styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="final styling" />
+  </component>
+</project>

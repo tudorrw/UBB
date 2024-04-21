@@ -1,0 +1,66 @@
+<div class="wrapper">
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/calendar">Calendar view</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="logoutUser()" class="nav-link" href="#">Logout</a>
+      </li>
+
+    </ul>
+  </nav>
+  <div class="content">
+    <div class="header">
+      <h1>Task Management</h1>
+      <div class="buttons">
+        <button class="btn" (click)="openTaskCreator()">Add Task</button>
+      </div>
+    </div>
+    <div class="container nowrap">
+      <div class="column" id="1" ref='todo' cdkDropList (cdkDropListDropped)="onTaskDrop($event,'1')"
+        [cdkDropListConnectedTo]="['1','2','3','4','5']">
+        <h2 id="to-do-header">To-Do</h2>
+        <ul class="tasks" id="todo-tasks">
+          <div *ngFor="let task of filterTasksByStage('To-Do')">
+            <app-task-card [task]="task"></app-task-card>
+          </div>
+        </ul>
+      </div>
+      <div class="column" id="2" ref='planned' cdkDropList (cdkDropListDropped)="onTaskDrop($event,'2')"
+        [cdkDropListConnectedTo]="['1','2','3','4','5']">
+        <h2 id="planned-header">Planned</h2>
+        <ul class="tasks" id="planned-tasks">
+          <div *ngFor="let task of filterTasksByStage('Planned')">
+            <app-task-card [task]="task"></app-task-card>
+          </div>
+        </ul>
+      </div>
+      <div class="column" id="3" ref='in-progress' cdkDropList (cdkDropListDropped)="onTaskDrop($event,'3')"
+        [cdkDropListConnectedTo]="['1','2','3','4','5']">
+        <h2 id="in-progress-header"> In Progress</h2>
+        <ul class="tasks" id="in-progress-tasks">
+          <div *ngFor="let task of filterTasksByStage('In Progress')">
+            <app-task-card [task]="task"></app-task-card>
+          </div>
+        </ul>
+      </div>
+      <div class="column" id="4" ref='finished' cdkDropList (cdkDropListDropped)="onTaskDrop($event,'4')"
+        [cdkDropListConnectedTo]="['1','2','3','4','5']">
+        <h2 id="finished-header">Finished</h2>
+        <ul class="tasks" id="finished-tasks">
+          <div *ngFor="let task of filterTasksByStage('Finished')">
+            <app-task-card [task]="task"></app-task-card>
+          </div>
+        </ul>
+      </div>
+      <div class="column" id="5" ref='verified' cdkDropList (cdkDropListDropped)="onTaskDrop($event,'5')"
+        [cdkDropListConnectedTo]="['1','2','3','4','5']">
+        <h2 id="verified-header">Verified</h2>
+        <ul class="tasks" id="verified-tasks">
+          <div *ngFor="let task of filterTasksByStage('Verified')">
+            <app-task-card [task]="task"></app-task-card>
+          </div>
+        </ul>
+      </div>
+    </div>

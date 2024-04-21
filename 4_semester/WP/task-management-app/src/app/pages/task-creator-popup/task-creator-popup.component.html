@@ -1,0 +1,57 @@
+<div class="task-popup-container" [ngClass]="{
+  'work-category': taskForm.get('category')?.value === 'work',
+  'personal-category': taskForm.get('category')?.value === 'personal',
+  'study-category': taskForm.get('category')?.value === 'study',
+  'home-category': taskForm.get('category')?.value === 'home',
+  'low-priority': taskForm.get('priority')?.value === 'low',
+  'medium-priority': taskForm.get('priority')?.value === 'medium',
+  'high-priority': taskForm.get('priority')?.value === 'high',
+  'critical-priority': taskForm.get('priority')?.value === 'critical'
+}">
+  <form [formGroup]="taskForm" (ngSubmit)="saveTask()">
+    <h2 class="popup-title">Create a New Task</h2>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" placeholder="Title">
+      <mat-error *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched">Title is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" placeholder="Description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Priority</mat-label>
+      <mat-select formControlName="priority" placeholder="Select Priority">
+        <mat-option *ngFor="let pr of priorities" [value]="pr.toLowerCase()">{{pr}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="taskForm.get('priority')?.invalid && taskForm.get('priority')?.touched">Priority is
+        required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category" placeholder="Select Category">
+        <mat-option *ngFor="let ca of categories" [value]="ca.toLowerCase()">{{ca}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="taskForm.get('category')?.invalid && taskForm.get('category')?.touched">Category is
+        required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Due Date</mat-label>
+      <input matInput [matDatepicker]="dueDatePicker" formControlName="dueDate" placeholder="Due Date">
+      <mat-datepicker-toggle matSuffix [for]="dueDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #dueDatePicker></mat-datepicker>
+      <mat-error *ngIf="taskForm.get('dueDate')?.invalid && taskForm.get('dueDate')?.touched">Invalid Due
+        Date</mat-error>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit" [disabled]="taskForm.invalid">Save</button>
+      <button mat-button type="button" (click)="closeDialog()">Cancel</button>
+    </div>
+  </form>
+</div>
