@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "iwlx91i/8nZM0ZNPMhd/7glifuFUgS32l12KAbDrP4q1YLdpNcrEHjCIONJGkyvUUUl7f+zhQt0MUO+hJINozg==",
+  "success": true,
+  "projectFilePath": "/Users/tudor/UBB/4_semester/DBMS/database-connections/csharp-connection/music-festivals/music-festivals.csproj",
+  "expectedPackageFiles": [
+    "/Users/tudor/.nuget/packages/log4net/2.0.17/log4net.2.0.17.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.1/microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/mono.data.sqlite/1.0.61/mono.data.sqlite.1.0.61.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/mysqlconnector/2.3.6/mysqlconnector.2.3.6.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/sqlite/3.13.0/sqlite.3.13.0.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/system.configuration.configurationmanager/4.5.0/system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/system.security.cryptography.protecteddata/4.5.0/system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/system.security.permissions/4.5.0/system.security.permissions.4.5.0.nupkg.sha512",
+    "/Users/tudor/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Mono.Data.Sqlite 1.0.61' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Mono.Data.Sqlite",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
