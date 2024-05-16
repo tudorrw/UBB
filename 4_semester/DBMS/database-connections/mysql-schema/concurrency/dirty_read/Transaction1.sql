@@ -13,3 +13,4 @@ START TRANSACTION;
     SET price = price + 100 WHERE festivalId = 1 and ticketTypeId = 1;
 COMMIT;
 
+SELECT @@global.transaction_ISOLATION;

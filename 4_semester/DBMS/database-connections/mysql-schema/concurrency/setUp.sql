@@ -1,3 +1,4 @@
+drop table `music-festivals`.festivalsTicketsPricesConcurrency;
 create table `music-festivals`.festivalsTicketsPricesConcurrency
 (
     festivalId   int not null,
@@ -17,4 +18,3 @@ values
 
 select * from `music-festivals`.festivalsTicketsPricesConcurrency;
 
-drop table `music-festivals`.festivalsTicketsPricesConcurrency;

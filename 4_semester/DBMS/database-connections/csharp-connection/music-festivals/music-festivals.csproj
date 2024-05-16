@@ -17,6 +17,15 @@
     <ItemGroup>
       <Compile Remove="model\Artist.cs" />
       <Compile Remove="repositories\AbstractRepository2.cs" />
+      <Compile Remove="deLaPatri\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="deLaPatri\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="deLaPatri\**" />
     </ItemGroup>
 
 </Project>

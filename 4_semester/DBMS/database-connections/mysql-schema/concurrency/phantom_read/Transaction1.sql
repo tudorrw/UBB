@@ -1,4 +1,3 @@
-
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 START TRANSACTION;
     SELECT * FROM `music-festivals`.festivalsTicketsPricesConcurrency;
