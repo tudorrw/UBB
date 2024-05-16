@@ -57,7 +57,7 @@ function App() {
           Concurrency Issues
         </Typography>
         <div className='input-container' style={{ marginBottom: '16px' }}>
-          <input type="text" placeholder="Enter Band ID" value={bandId} onChange={(e) => setBandId(e.target.value)} style={{ width: '30%', padding: '8px', fontSize: '16px' }} />
+          <input type="text" placeholder="Enter Band ID (not for Phantom Read)" value={bandId} onChange={(e) => setBandId(e.target.value)} style={{ width: '30%', padding: '8px', fontSize: '16px' }} />
         </div>
         <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
           <Button onClick={() => { setSelectedIssue(selectedIssue === 'dirty-write' ? null : 'dirty-write'); selectedIssue !== 'dirty-write' && sendRequest('dirty-write'); }}>{selectedIssue === 'dirty-write' ? 'Hide Dirty Write' : 'Dirty Write'}</Button>
