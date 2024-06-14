@@ -1,0 +1,3 @@
+/Users/tudor/UBB/2_semester/DSA/lab_5_SortedSet/cmake-build-debug/CMakeFiles/lab_5_SortedSet.dir
+/Users/tudor/UBB/2_semester/DSA/lab_5_SortedSet/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/tudor/UBB/2_semester/DSA/lab_5_SortedSet/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -97,7 +97,7 @@ int SortedSet::minimum(int node) {
     return currentNode; //retuns the index of the leftmost node
 }
 
-//best case: theta(n): when the given node is the root and has no children
+//best case: theta(1): when the given node is the root and has no children
 //average case: theta(log(n)), depends on the height of the bst, which is logarithmic on average for a balanced tree
 //worst case: theta(n), for a completely unbalanced tree
 //general time complexity: O(n)
@@ -140,7 +140,7 @@ int SortedSet::remove_rec(int node, TComp elem) {
     return node;
 }
 
-//best case: theta(n): when the given node is the root and has no children
+//best case: theta(1): when the given node is the root and has no children
 //average case: theta(log(n)), depends on the height of the bst, which is logarithmic on average for a balanced tree
 //worst case: theta(n), for a completely unbalanced tree
 //general time complexity: O(n)
