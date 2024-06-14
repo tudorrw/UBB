@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/tudor/UBB/2_semester/DSA/lab5_SortedMultiMap -B /Users/tudor/UBB/2_semester/DSA/lab5_SortedMultiMap/cmake-build-debug
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/tudor/UBB/2_semester/DSA/lab5_SortedMultiMap/cmake-build-debug
