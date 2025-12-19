@@ -1,0 +1,132 @@
+<div class="calendar-content">
+  <full-calendar [options]="calendarOptions"></full-calendar>
+</div>
+
+
+<!-- Pop-up pentru adăugare activitate -->
+<p-dialog [(visible)]="activityDialog" [style]="{ width: '50rem' }" [modal]="true" [closable]="true" header="Add Activity">
+  <p-messages
+    [(value)]="messages"
+    [showTransitionOptions]="'500ms'"
+    [hideTransitionOptions]="'500ms'"
+    [enableService]="false">
+  </p-messages>
+
+  <form #activityForm="ngForm" (ngSubmit)="submitActivity(activityForm)">
+    <div class="p-fluid">
+      <!-- Data selectată -->
+      <div class="p-field">
+        <label for="selectedDate">Selected Date</label>
+        <input type="text" id="selectedDate" name="selectedDate" pInputText [value]="selectedDate | date : 'dd/MM/yyyy'" [readonly]="true">
+      </div>
+
+      <div class="p-field p-grid" style="display: flex; gap: 1rem;">
+      <!-- Ora sosirii -->
+        <div class="p-field" style="flex: 1;">
+          <label>Arrival Time</label>
+          <p-calendar [(ngModel)]="startDate" timeOnly="true" name="startDate" inputId="startDate" [showTime]="true" hourFormat="24" required></p-calendar>
+          <small *ngIf="activityForm.submitted && !startDate" class="p-error">Arrival time is required.</small>
+        </div>
+
+        <!-- Ora plecării -->
+        <div class="p-field" style="flex: 1;">
+          <label>Departure Time</label>
+          <p-calendar [(ngModel)]="endDate" timeOnly="true" name="endDate" inputId="endDate" [showTime]="true" hourFormat="24" required></p-calendar>
+          <small *ngIf="activityForm.submitted && !endDate" class="p-error">Departure time is required.</small>
+        </div>
+      </div>
+
+      <!-- Descriere -->
+      <div class="p-field">
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          pInputTextarea
+          [(ngModel)]="description"
+          name="description"
+          placeholder="Add a description"
+          rows="4"
+          required
+          style="resize: none; width: 100%;"
+        ></textarea>
+        <small *ngIf="activityForm.submitted && !description" class="p-error">Description is required.</small>
+      </div>
+    </div>
+
+    <!-- Butoane de acțiune -->
+    <div class="p-dialog-footer button-container">
+      <button pButton label="Cancel" icon="pi pi-times" type="button" (click)="onCancelSubmitWorkingDayForm(activityForm)" class="p-button-secondary"></button>
+      <button pButton label="Submit" icon="pi pi-check" type="submit" class="p-button-primary"></button>
+    </div>
+  </form>
+</p-dialog>
+
+
+<!-- Pop-up pentru detalii activitate -->
+<p-dialog [(visible)]="detailDialog" [style]="{ width: '30rem' }" [modal]="true" [closable]="true" header="Event Details">
+  <div class="p-fluid" style="padding: 1rem;">
+    <!-- Selected Date -->
+    <div class="p-field p-grid">
+      <label for="selectedDate2" class="p-col-4 font-semibold">Selected Date</label>
+      <input pInputText id="selectedDate2" [value]="selectedDate | date : 'dd/MM/yyyy'" disabled />
+    </div>
+
+    <div class="p-field p-grid" style="display: flex; gap: 1rem;">
+      <!-- Arrival Time -->
+      <div class="p-field" style="flex: 1;">
+        <label for="startDate" class="p-col-4 font-semibold">Arrival Time</label>
+        <input pInputText id="startDate" [value]="startDate | date: 'shortTime'" disabled />
+      </div>
+
+      <!-- Departure Time -->
+      <div class="p-field" style="flex: 1;">
+        <label for="endDate" class="p-col-4 font-semibold">Departure Time</label>
+        <input pInputText id="endDate" [value]="endDate | date: 'shortTime'" disabled />
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="p-field p-grid">
+      <label for="descriptionn" class="p-col-4 font-semibold">Description</label>
+      <div class="p-col-8">
+    <textarea
+      id="descriptionn"
+      pInputTextarea
+      [value]="description"
+      disabled
+      rows="5"
+      style="resize: none; width: 100%;"
+    ></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="p-dialog-footer button-container">
+    <button
+      pButton
+      label="Edit"
+      icon="pi pi-pencil"
+      (click)="openEditDialog()"
+      class="p-button-warning"
+      *ngIf="isEditMode"
+    ></button>
+    <button
+      pButton
+      label="Delete"
+      icon="pi pi-trash"
+      (click)="selectedEventId ? deleteActivity(selectedEventId.toString()) : null"
+      class="p-button-danger"
+      *ngIf="isEditMode"
+    ></button>
+  </div>
+</p-dialog>
+
+
+<p-toast position="bottom-left" key="save-create-working-day" />
+<p-toast position="bottom-left" key="save-modify-working-day" />
+<p-toast position="bottom-left" key="save-delete-working-day" />
+<p-toast position="bottom-left" key="cancel-delete-working-day" />
+<p-toast position="bottom-left" key="warn-vacation-event" />
+<p-toast position="bottom-left" key="info-vacation-event" />
+

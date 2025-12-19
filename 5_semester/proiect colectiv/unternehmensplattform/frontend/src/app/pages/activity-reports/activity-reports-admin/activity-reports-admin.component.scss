@@ -1,0 +1,33 @@
+.calendar-content {
+  min-height: calc(100vh - 13.5rem);
+  padding: 2rem;
+}
+
+.fc {
+  height: 720px;
+}
+
+.fc .fc-col-header-cell-cushion {
+  display: inline-block;
+  padding: 2px 4px;
+}
+
+.calendar-content {
+  position: relative;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
+}
+
+.summary-cell {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}

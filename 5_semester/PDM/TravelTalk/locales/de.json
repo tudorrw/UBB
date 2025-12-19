@@ -1,0 +1,67 @@
+{
+  "app": {
+    "name": "TravelTalk",
+    "description": "Ein soziales Netzwerk für Reisende"
+  },
+  "login": {
+    "welcome": "Willkommen bei TravelTalk",
+    "signUp": "Registrieren",
+    "login": "Anmelden",
+    "name": "Name",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "submit": "Absenden",
+    "dismiss": "Verwerfen",
+    "forgotPassword": "Passwort vergessen?",
+    "noAccount": "Sie haben noch kein Konto?",
+    "alreadyHaveAccount": "Sie haben bereits ein Konto?",
+    "error-handling": {
+      "invalid-email": "Ungültiges E-Mail-Format. Bitte überprüfen und noch einmal versuchen.",
+      "invalid-password": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+      "weak-password": "Das Passwort ist zu schwach. Bitte verwenden Sie ein stärkeres Passwort.",
+      "email-already-in-use": "Diese E-Mail-Adresse ist bereits mit einem Konto verbunden.",
+      "do-you-want-to-login": "Möchten Sie sich stattdessen anmelden?",
+      "invalid-credentials": "Diese E-Mail- und Passwortkombination ist falsch."
+    }
+  },
+  "settings": {
+    "Settings": "Einstellungen",
+    "language": "Sprache",
+    "mapSettings": "Karten-Einstellungen",
+    "radius": "Radius",
+    "mapType": "Typ",
+    "appearance": "Erscheinungsbild",
+    "logout": "Abmelden"
+  },
+  "languages": {
+    "english": "Englisch",
+    "romanian": "Rumänisch",
+    "german": "Deutsch"
+  },
+  "radius": {
+    "300": "300 Meter",
+    "1000": "1 Kilometer",
+    "3000": "3 Kilometer",
+    "5000": "5 Kilometer",
+    "custom": "Benutzerdefiniert"
+  },
+  "mapType": {
+    "standard": "Standard",
+    "satellite": "Satellit"
+  },
+  "appearance": {
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
+  "categories": {
+    "near": "In der Nähe",
+    "questions": "Fragen",
+    "recommended": "Empfohlen",
+    "history": "Vergangenheit"
+  },
+  "noImage": "Kein Bild verfügbar",
+  "search": {
+    "searchBarPlaceholder": "Suche nach einem Ort...",
+    "noResults": "Keine Orte gefunden, die Ihrer Suche entsprechen."
+  }
+}

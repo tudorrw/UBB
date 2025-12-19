@@ -1,0 +1,28 @@
+::ng-deep .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+:host ::ng-deep .p-dialog-footer {
+  padding-top: 1rem;
+}
+
+
+//::ng-deep .p-datepicker table td {
+//  padding: 2px !important;
+//}
+
+//::ng-deep .p-datepicker table td,tr{
+//  padding: 2px !important;
+//}
+
+::ng-deep {
+  .p-datepicker td>span {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+

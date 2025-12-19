@@ -1,0 +1,328 @@
+<!--<app-employee-manager></app-employee-manager>-->
+
+<p-toast position="bottom-left" key="edit" />
+
+<div style="margin-top: 2rem; display: flex; justify-content: center;">
+    <p-table
+      #dt1
+      [value]="employees"
+      dataKey="id"
+      [style]="{'width': '85vw'}"
+      styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm"
+      [loading]="loading"
+      [paginator]="true"
+      [rows]="5"
+      [tableStyle]="{ 'min-width': '80%' }"
+      [rowsPerPageOptions]="[5, 10]"
+      [globalFilterFields]="['firstName', 'lastName', 'email', 'telefonNumber', 'signingDate']"
+      editMode="row"
+    >
+      <ng-template pTemplate="caption">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <!-- Left-aligned title -->
+          <h2 style="margin: 0; font-size: 1.5rem; font-weight: bold; color: #3A8BC4;">
+            Employee Details
+          </h2>
+
+          <!-- Right-aligned search bar and button -->
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span class="p-input-icon-left ml-auto">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                [(ngModel)]="searchValue"
+                (input)="dt1?.filterGlobal(searchValue, 'contains')"
+                placeholder="Search keyword"
+              />
+            </span>
+            <button pButton icon="pi pi-plus" label="Add Employee" (click)="showDialog = true"></button>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template pTemplate="header">
+      <tr>
+<!--        <th style="width:19%">First Name</th>-->
+        <th pSortableColumn="firstName" style="width:19%">
+          First Name <p-sortIcon />
+        </th>
+
+        <th pSortableColumn="lastName" style="width:19%">
+          Last Name <p-sortIcon />
+        </th>
+
+        <th pSortableColumn="email" style="width:20%">
+          Email <p-sortIcon />
+        </th>
+
+        <th style="width:17%">Phone</th>
+        <th pSortableColumn="signingDate" style="width:10%">
+          Signing Date <p-sortIcon />
+        </th>
+        <th>Restriction</th>
+        <th style="width:10%"></th>
+      </tr>
+
+      <th>
+        <p-columnFilter
+          type="text"
+          field="firstName"
+          placeholder="Search by first name"
+          ariaLabel="Filter First Name"
+        />
+      </th>
+      <th>
+        <p-columnFilter
+          type="text"
+          field="lastName"
+          placeholder="Search by last name"
+          ariaLabel="Filter Last Name" />
+      </th>
+      <th>
+        <p-columnFilter
+          type="text"
+          field="email"
+          placeholder="Search by email"
+          ariaLabel="Filter Email" />
+      </th>
+      <th>
+        <p-columnFilter
+          type="text"
+          field="telefonNumber"
+          placeholder="Search by phone number"
+          ariaLabel="Filter Phone Number" />
+      </th>
+      <th>
+        <div class="flex align-items-center">
+          <p-columnFilter type="date" field="signingDate" display="menu" />
+        </div>
+      </th>
+      <th>
+        <p-columnFilter type="boolean" field="accountLocked"/>
+      </th>
+
+    </ng-template>
+      <ng-template pTemplate="body" let-employee let-editing="editing" let-ri="rowIndex">
+      <tr [pEditableRow]="employee">
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                pInputText type="text"
+                [(ngModel)]="employee.firstName"
+                required />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{employee.firstName}}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                pInputText type="text"
+                [(ngModel)]="employee.lastName"
+                required/>
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{employee.lastName}}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                pInputText
+                type="text"
+                [(ngModel)]="employee.email"
+                required
+                pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/"
+                (ngModelChange)="validateEmail(employee.email)"
+              />
+              <!-- Error message displayed conditionally based on validation result -->
+              <div *ngIf="!validateEmail(employee.email)" class="error-message">
+                <small>Please enter a valid email address.</small>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ employee.email }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                pInputText
+                type="text"
+                [(ngModel)]="employee.telefonNumber"
+                pattern="^(07[0-9]{8})$"
+                required
+                (ngModelChange)="validatePhoneNumber(employee.telefonNumber)"
+              />
+              <div *ngIf="!validatePhoneNumber(employee.telefonNumber)" class="error-message">
+                <small>Please enter a valid phone number.</small>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ formatPhoneNumber(employee.telefonNumber) }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>{{ employee.signingDate | date: 'dd/MM/yyyy'}}</td>
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <p-inputSwitch [(ngModel)]="employee.accountLocked"></p-inputSwitch>
+            </ng-template>
+            <ng-template pTemplate="output">
+              <div style="display: flex; justify-content: center; align-items: center;">
+                <i
+                  class="pi"
+                  [ngClass]="employee.accountLocked ? 'pi-times-circle' : 'pi-check-circle'"
+                  [ngStyle]="{ 'color': employee.accountLocked ? 'red' : 'green' }"
+                ></i>
+              </div>
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <div class="flex align-items-center justify-content-center gap-2">
+            <button
+              *ngIf="!editing"
+              pButton
+              pRipple
+              type="button"
+              pInitEditableRow
+              icon="pi pi-pencil"
+              (click)="onRowEditInit(employee)"
+              class="p-button-rounded p-button-text">
+            </button>
+            <button
+              *ngIf="editing"
+              pButton
+              pRipple
+              type="button"
+              pSaveEditableRow
+              icon="pi pi-check"
+              (click)="onRowEditSave(employee)"
+              class="p-button-rounded p-button-text p-button-success mr-2">
+            </button>
+            <button
+              *ngIf="editing"
+              pButton pRipple
+              type="button"
+              pCancelEditableRow
+              icon="pi pi-times"
+              (click)="onRowEditCancel(employee, ri)"
+              class="p-button-rounded p-button-text p-button-danger">
+            </button>
+          </div>
+        </td>
+
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7">No employees found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<p-toast position="bottom-left" key="save-add-employee" />
+<p-toast position="bottom-left" key="cancel-add-employee" />
+<p-toast position="bottom-left" key="uncompleted-add-employee" />
+
+<p-toast position="bottom-left" key="save-edit-employee" />
+<p-toast position="bottom-left" key="cancel-edit-employee" />
+
+
+<p-dialog header="Add New Employee" [(visible)]="showDialog" [modal]="true" [closable]="true" [style]="{width: '42vw'}">
+  <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="firstName">First Name</label>
+        <input id="firstName" pInputText [(ngModel)]="newEmployee.firstName" name="firstName" required />
+        <small *ngIf="employeeForm.submitted && !newEmployee.firstName" class="p-error">First name is required.</small>
+      </div>
+      <div class="p-field">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" pInputText [(ngModel)]="newEmployee.lastName" name="lastName" required />
+        <small *ngIf="employeeForm.submitted && !newEmployee.lastName" class="p-error">Last name is required.</small>
+      </div>
+      <div class="p-field">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          pInputText
+          [(ngModel)]="newEmployee.email"
+          name="email"
+          #email="ngModel"
+          required
+          (ngModelChange)="validateEmail(newEmployee.email)"
+        />
+        <small *ngIf="email.touched && !newEmployee.email" class="p-error">Email is required.</small>
+        <small *ngIf="email.touched && !validateEmail(newEmployee.email)" class="p-error">Please enter a valid email address.</small>
+      </div>
+
+      <div class="p-field">
+        <label for="telefonNumber">Phone Number</label>
+        <input
+          id="telefonNumber"
+          pInputText
+          [(ngModel)]="newEmployee.telefonNumber"
+          name="telefonNumber"
+          #phone="ngModel"
+          (ngModelChange)="validatePhoneNumber(newEmployee.telefonNumber)"
+        />
+        <small *ngIf="phone.touched && !validatePhoneNumber(newEmployee.telefonNumber)" class="p-error">Please enter a valid phone number.</small>
+      </div>
+
+      <div class="p-field">
+        <label for="passwordHash">Password</label>
+        <input
+          id="passwordHash"
+          pInputText
+          [(ngModel)]="newEmployee.passwordHash"
+          name="passwordHash"
+          required
+          type="password"
+        />
+        <small *ngIf="employeeForm.submitted && !newEmployee.passwordHash" class="p-error">Password is required.</small>
+      </div>
+      <div class="p-field" style="width: 50%">
+        <div class="field">
+          <label>Signing Date</label>
+          <p-calendar appendTo="body"
+            [(ngModel)]="newEmployee.signingDate"
+            name="signingDate"
+            inputId="signingDate"
+            [showIcon]="true"
+            [readonlyInput]="true"
+            [minDate]="minDate"
+            [maxDate]="maxDate"
+            dateFormat="dd/mm/yy"
+            required
+          ></p-calendar>
+          <small *ngIf="employeeForm.submitted && !newEmployee.signingDate" class="p-error">Signing date is required.</small>
+        </div>
+      </div>
+    </div>
+    <div class="p-dialog-footer button-container">
+      <button pButton label="Cancel" icon="pi pi-times" (click)="onCancel(employeeForm)" type="button" class="p-button-secondary"></button>
+      <button pButton label="Save" icon="pi pi-check" type="submit" class="p-button-primary"></button>
+    </div>
+  </form>
+</p-dialog>
+

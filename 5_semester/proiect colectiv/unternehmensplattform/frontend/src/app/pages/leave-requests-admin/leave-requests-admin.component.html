@@ -1,0 +1,194 @@
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-top: 2rem;">
+  <div style="flex: 0.4; padding-left: 1rem;">
+    <div style="width: 100%">
+      <p-table
+        [value]="requests"
+        styleClass="p-datatable-gridlines"
+        [scrollable]="true"
+        scrollHeight="500px"
+        [tableStyle]="{ 'min-width': '40rem' }">
+
+        <ng-template pTemplate="caption">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <!-- Title -->
+            <h2 style="margin: 0; font-size: 1.5rem; font-weight: bold; color: #3A8BC4;">
+              Pending Vacation Requests
+            </h2>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="min-width:110px" pSortableColumn="employeeFullName">
+              Name <p-sortIcon field="employeeFullName" />
+            </th>
+            <th style="min-width:110px" pSortableColumn="startDate">
+              Start Date <p-sortIcon field="startDate" />
+            </th>
+            <th style="min-width:110px" pSortableColumn="endDate">
+              End Date <p-sortIcon field="endDate" />
+            </th>
+            <th style="min-width:110px" pSortableColumn="vacationDays">
+              Requested Days <p-sortIcon field="vacationDays" />
+            </th>
+            <th style="min-width:110px" pSortableColumn="description">
+              Description <p-sortIcon field="description" />
+            </th>
+            <th style="min-width:140px">
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-request>
+          <tr>
+            <td>{{ request.employeeFullName }}</td>
+            <td>{{ request.startDate | date : 'dd/MM/yyyy' }}</td>
+            <td>{{ request.endDate | date : 'dd/MM/yyyy' }}</td>
+            <td>{{ request.vacationDays }}</td>
+            <td>{{ request.description }}</td>
+              <td>
+                  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; justify-content: center;">
+                    <button
+                      pButton
+                      label="Approve"
+                      severity="success"
+                      icon="pi pi-thumbs-up"
+                      [outlined]="true"
+                      (click)="onApprove(request.id, 'Approved')"
+                      style="height: 30px; width: 95%"
+                    ></button>
+
+                    <button
+                      pButton
+                      label="Decline"
+                      severity="danger"
+                      icon="pi pi-thumbs-down"
+                      [outlined]="true"
+                      (click)="onDecline(request.id, 'Rejected')"
+                      style="height: 30px; width: 95%"
+                    ></button>
+                  </div>
+
+              </td>
+
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="5">No pending vacation requests found.</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+
+  <div style="flex: 0.6; padding-right: 1rem;">
+    <div style="width: 100%">
+      <p-table
+        #dt2
+        [value]="employeesWithRequests"
+        [style]="{ 'min-width': '30vw' }"
+        styleClass="p-datatable-striped p-datatable-gridlines"
+        [expandedRowKeys]="expandedRows"
+        dataKey="userDetailsDTO.id"
+        [paginator]="true"
+        [rows]="11"
+        [rowsPerPageOptions]="[5, 10, 25]"
+        [globalFilterFields]="['userDetailsDTO.fullName', 'userDetailsDTO.email', 'useDetailsDTO.actualYearVacationDays']"
+        >
+        <ng-template pTemplate="caption">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h2 style="margin: 0; font-size: 1.5rem; font-weight: bold; color: #3A8BC4;">
+              Employees with Vacation Requests
+            </h2>
+      <!--      <p-button-->
+      <!--        label="Clear"-->
+      <!--        [outlined]="true"-->
+      <!--        icon="pi pi-filter-slash"-->
+      <!--        (onClick)="clear(dt2)"-->
+      <!--      ></p-button>-->
+            <span class="p-input-icon-left ml-auto">
+                <i class="pi pi-search"></i>
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="searchValue"
+                  (input)="dt2?.filterGlobal(searchValue, 'contains')"
+                  placeholder="Search keyword"
+                />
+              </span>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 5rem"></th>
+            <th pSortableColumn="userDetailsDTO.fullName">Name<p-sortIcon field="userDetailsDTO.fullName" /></th>
+            <th pSortableColumn="userDetailsDTO.email">Email<p-sortIcon field="userDetailsDTO.email" /></th>
+            <th pSortableColumn="userDetailsDTO.actualYearVacationDays">Vacation Days Left<p-sortIcon field="userDetailsDTO.actualYearVacationDays" /></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-employeesWithRequests let-expanded="expanded">
+          <tr>
+            <td>
+              <p-button type="button" pRipple [pRowToggler]="employeesWithRequests" [text]="true" [rounded]="true" [plain]="true" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'" />
+            </td>
+            <td class="bold-text">{{ employeesWithRequests.userDetailsDTO.fullName}}</td>
+            <td class="bold-text">{{ employeesWithRequests.userDetailsDTO.email }}</td>
+            <td class="bold-text">{{ employeesWithRequests.userDetailsDTO.actualYearVacationDays }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="rowexpansion" let-employeesWithRequests>
+          <tr>
+            <td colspan="7">
+              <div class="p-3">
+                <br>
+                <p-table
+                  [value]="employeesWithRequests.vacationRequests"
+                  dataKey="id"
+                  scrollable="true"
+                  [scrollHeight]="'150px'"
+                >
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th pSortableColumn="startDate">Start Date<p-sortIcon field="startDate" /></th>
+                      <th pSortableColumn="endDate">End Date<p-sortIcon field="endDate" /></th>
+                      <th pSortableColumn="vacationDays">Requested Days<p-sortIcon field="vacationDays" /></th>
+                      <th pSortableColumn="description">Description<p-sortIcon field="description" /></th>
+                      <th pSortableColumn="status">Status<p-sortIcon field="status" /></th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-vacationRequest>
+                    <tr>
+                      <td>{{ vacationRequest.startDate | date : 'dd/MM/yyyy' }}</td>
+                      <td>{{ vacationRequest.endDate | date : 'dd/MM/yyyy' }}</td>
+                      <td>{{ vacationRequest.vacationDays }}</td>
+                      <td>{{ vacationRequest.description }}</td>
+                      <td [ngClass]="{
+                          'status-approved': vacationRequest.status === VacationRequestStatus.Approved,
+                          'status-pending': vacationRequest.status === VacationRequestStatus.New,
+                          'status-rejected': vacationRequest.status === VacationRequestStatus.Rejected,
+                          'status-default': !vacationRequest.status
+                          }">
+                        {{ vacationRequest.status }}
+                      </td>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="emptymessage">
+                    <tr>
+                      <td colspan="6">There are no requests for this user.</td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<p-toast position="bottom-left" key="decline-request-overlap-activity"></p-toast>
+
+
+
+

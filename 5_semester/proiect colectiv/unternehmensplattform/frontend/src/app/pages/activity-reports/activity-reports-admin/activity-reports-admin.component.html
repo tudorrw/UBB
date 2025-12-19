@@ -1,0 +1,20 @@
+<div class="calendar-content">  <full-calendar [options]="calendarOptions"></full-calendar></div>
+
+<!-- Summary Row -->
+<div class="summary-row">
+  <div *ngFor="let resource of resources" class="summary-cell">
+    <strong>{{ resource.title }}</strong>
+    <div *ngIf="employeeDailyTotals[resource.id + '_' + currentDate] as totals">
+      Total for {{ currentDate }}:
+      {{ totals.hours || 0 }}h
+      {{ totals.minutes || 0 }}m
+    </div>
+    <div *ngIf="!employeeDailyTotals[resource.id + '_' + currentDate]">
+      No work recorded.
+    </div>
+  </div>
+</div>
+
+
+
+

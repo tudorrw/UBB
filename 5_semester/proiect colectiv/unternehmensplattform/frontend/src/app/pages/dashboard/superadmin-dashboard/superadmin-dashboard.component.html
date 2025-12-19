@@ -1,0 +1,242 @@
+<div style="margin-top: 2rem; display: flex; justify-content: center;" xmlns="http://www.w3.org/1999/html">
+  <p-table
+    [value]="companies"
+    [style]="{ 'min-width': '80vw' }"
+    styleClass="p-datatable-striped p-datatable-gridlines"
+    [expandedRowKeys]="expandedRows"
+    dataKey="companyDTO.companyId"
+    (onRowExpand)="onRowExpand($event)"
+    (onRowCollapse)="onRowCollapse($event)"
+  >
+  <ng-template pTemplate="caption">
+    <div style=" display: flex; justify-content: flex-end" class="flex flex-wrap justify-content-end gap-2">
+      <p-button label="Expand All" icon="pi pi-plus" text (onClick)="expandAll()" />
+      <p-button label="Collapse All" icon="pi pi-minus" text (onClick)="collapseAll()" />
+      <button pButton icon="pi pi-plus" label="Add Company" (click)="showCompanyDialog = true"></button>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 5rem"></th>
+      <th pSortableColumn="name">Name<p-sortIcon field="name" /></th>
+      <th pSortableColumn="address">Address<p-sortIcon field="address" /></th>
+      <th pSortableColumn="telefonNumber">Phone Number<p-sortIcon field="telefonNumber" /></th>
+
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-company let-expanded="expanded">
+    <tr>
+      <td>
+        <p-button type="button" pRipple [pRowToggler]="company" [text]="true" [rounded]="true" [plain]="true" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'" />
+      </td>
+        <td class="bold-text">{{ company.companyDTO.name }}</td>
+        <td class="bold-text">{{ company.companyDTO.address }}</td>
+        <td class="bold-text">{{ formatPhoneNumber(company.companyDTO.telefonNumber) }}</td>
+
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="rowexpansion" let-company>
+    <tr>
+      <td colspan="7">
+        <div class="p-3">
+          <p-table [value]="company.admins" dataKey="id">
+              <ng-template pTemplate="caption">
+                  <div style="display: flex; justify-content: flex-end" class="flex flex-wrap justify-content-end gap-2">
+                      <button pButton icon="pi pi-plus" label="Add Admin" (click)="openAdminDialogForCompany(company.companyDTO.companyId)"></button>
+                  </div>
+              </ng-template>
+
+              <ng-template pTemplate="header">
+              <tr>
+                <th pSortableColumn="firstName">First Name<p-sortIcon field="firstName" /></th>
+                <th pSortableColumn="lastName">Last Name<p-sortIcon field="lastName" /></th>
+                <th pSortableColumn="email">Email<p-sortIcon field="email" /></th>
+                <th pSortableColumn="telefonNumber">Phone Number<p-sortIcon field="telefonNumber" /></th>
+                <th>Restriction</th>
+            </ng-template>
+            <ng-template pTemplate="body" let-admin>
+              <tr>
+                <td>{{ admin.firstName }}</td>
+                <td>{{ admin.lastName }}</td>
+                <td>{{ admin.email }}</td>
+                <td>{{ formatPhoneNumber(admin.telefonNumber) }}
+                </td>
+                <td>
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <i
+                      class="pi"
+                      [ngClass]="admin.accountLocked ? 'pi-times-circle' : 'pi-check-circle'"
+                      [ngStyle]="{ 'color': admin.accountLocked ? 'red' : 'green' }"
+                    ></i>
+                  </div>
+                </td>
+
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage">
+              <tr>
+                <td colspan="6">There are no admins for this company yet.</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+  </p-table>
+</div>
+
+<p-toast position="bottom-left" key="save-add-company" />
+<p-toast position="bottom-left" key="cancel-add-company" />
+<p-toast position="bottom-left" key="save-add-admin" />
+<p-toast position="bottom-left" key="cancel-add-admin" />
+<p-toast position="bottom-left" key="uncompleted" />
+<p-toast position="bottom-left" key="remove-admin" />
+
+<p-dialog header="Add New Company" [(visible)]="showCompanyDialog" [modal]="true" [closable]="true" [style]="{ width: '50vw' }"   (onHide)="cancelCompany(companyForm)">
+  <form #companyForm="ngForm" (ngSubmit)="addCompany(companyForm)">
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="name">Company Name</label>
+        <input id="name" pInputText [(ngModel)]="newCompany.name" name="name" required />
+        <small *ngIf="companyForm.submitted && !newCompany.name" class="p-error">Company name is required.</small>
+      </div>
+      <div class="p-field">
+        <label for="address">Address</label>
+        <input id="address" pInputText [(ngModel)]="newCompany.address" name="address" required />
+        <small *ngIf="companyForm.submitted && !newCompany.address" class="p-error">Address is required.</small>
+      </div>
+      <div class="p-field">
+        <label for="telefonNumber2">Phone Number</label>
+        <input id="telefonNumber2"
+           pInputText
+           [(ngModel)]="newCompany.telefonNumber"
+           name="telefonNumber2"
+           required
+           #phoneCompany="ngModel"
+           (ngModelChange)="validatePhoneNumber(newCompany.telefonNumber)"
+        />
+          <small *ngIf="phoneCompany.touched && !validatePhoneNumber(newCompany.telefonNumber)" class="p-error">Please enter a valid phone number</small>
+      </div>
+        <br>
+      <div class="p-field">
+        <p-button label="Add Admin" icon="pi pi-user-plus" (click)="showAdminDialog = true"></p-button>
+      </div>
+      <p-table [value]="newAdmins" [style]="{ 'min-width': '100%' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-admin let-rowIndex="rowIndex">
+          <tr>
+            <td>{{ admin.firstName }}</td>
+            <td>{{ admin.lastName }}</td>
+            <td>{{ admin.email }}</td>
+            <td>{{ admin.telefonNumber }}</td>
+            <td>
+              <button
+                  pButton
+                  icon="pi pi-trash"
+                  class="p-button-text p-button-danger"
+                  (click)="deleteAdmin(rowIndex)"
+              ></button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="p-dialog-footer button-container">
+      <button pButton label="Cancel" icon="pi pi-times" (click)="cancelCompany(companyForm)" type="button" class="p-button-secondary"></button>
+      <button pButton label="Save" icon="pi pi-check" type="submit" class="p-button-primary"></button>
+    </div>
+  </form>
+</p-dialog>
+
+<!-- Add Admin Dialog -->
+<p-dialog
+        [header]="showAdminDialogWithoutComp ? 'Add Admin to Existing Company' : 'Add New Admin'"
+        [(visible)]="showAdminDialog || showAdminDialogWithoutComp"
+        [modal]="true"
+        [closable]="true"
+        [style]="{ width: '40vw' }"
+        (onHide)="showAdminDialogWithoutComp ? cancelAdminWithoutCompany(adminForm) : cancelAdmin(adminForm)"
+>
+    <form
+        #adminForm="ngForm"
+        (ngSubmit)="showAdminDialogWithoutComp ? addAdminWithoutComp(adminForm) : addAdmin(adminForm)"
+    >
+        <div class="p-fluid">
+            <div class="p-field">
+                <label for="firstName">First Name</label>
+                <input id="firstName" pInputText [(ngModel)]="newAdmin.firstName" name="firstName" required />
+                <small *ngIf="adminForm.submitted && !newAdmin.firstName" class="p-error">First name is required.</small>
+            </div>
+            <div class="p-field">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" pInputText [(ngModel)]="newAdmin.lastName" name="lastName" required />
+                <small *ngIf="adminForm.submitted && !newAdmin.lastName" class="p-error">Last name is required.</small>
+            </div>
+            <div class="p-field">
+                <label for="email">Email</label>
+                <input
+                        id="email"
+                        pInputText
+                        [(ngModel)]="newAdmin.email"
+                        name="email"
+                        #email="ngModel"
+                        required
+                        (ngModelChange)="validateEmail(newAdmin.email)"
+                />
+                <small *ngIf="email.touched && !newAdmin.email" class="p-error">Email is required.</small>
+                <small *ngIf="email.touched && !validateEmail(newAdmin.email)" class="p-error">Please enter a valid email address.</small>
+            </div>
+            <div class="p-field">
+                <label for="telefonNumber">Phone Number</label>
+                <input
+                        id="telefonNumber"
+                        pInputText
+                        [(ngModel)]="newAdmin.telefonNumber"
+                        name="telefonNumber"
+                        #phone="ngModel"
+                        (ngModelChange)="validatePhoneNumber(newAdmin.telefonNumber)"
+                />
+                <small *ngIf="phone.touched && !validatePhoneNumber(newAdmin.telefonNumber)" class="p-error">Please enter a valid phone number</small>
+            </div>
+            <div class="p-field">
+                <label for="password">Password</label>
+                <input
+                        id="password"
+                        pInputText
+                        [(ngModel)]="newAdmin.passwordHash"
+                        name="password"
+                        type="password"
+                        required
+                />
+                <small *ngIf="adminForm.submitted && !newAdmin.passwordHash" class="p-error">Password is required.</small>
+            </div>
+        </div>
+        <div class="p-dialog-footer button-container">
+            <button
+                    pButton
+                    label="Cancel"
+                    icon="pi pi-times"
+                    (click)="showAdminDialogWithoutComp ? cancelAdminWithoutCompany(adminForm) : cancelAdmin(adminForm)"
+                    type="button"
+                    class="p-button-secondary"
+            ></button>
+            <button
+                    pButton
+                    label="Add"
+                    icon="pi pi-check"
+                    type="submit"
+                    class="p-button-primary"
+            ></button>
+        </div>
+    </form>
+</p-dialog>
+

@@ -1,0 +1,62 @@
+/* Top Bar with Gradient Animation */
+.top-bar {
+  background: linear-gradient(45deg, #3a8bc4, #67c0ff, #92e8ff, #b6fffc);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.user-details {
+  text-align: center;
+  margin: 5px 0;
+}
+
+:host ::ng-deep .transparent-tab-menu {
+  background: transparent;
+  border: none;
+  color: inherit; /* Inherits text color from .top-bar */
+}
+
+:host ::ng-deep .transparent-tab-menu .p-tabmenu-nav {
+  background: transparent;
+  border: none;
+  color: inherit; /* Inherits text color from .top-bar */
+}
+
+:host ::ng-deep .transparent-tab-menu .p-tabmenu-nav li {
+  background: transparent;
+  border: none;
+}
+
+:host ::ng-deep .transparent-tab-menu .p-tabmenu-nav li .p-menuitem-link {
+  background: transparent;
+  color: inherit;
+  font-weight: bold;
+  border-radius: 0; /* Remove border radius */
+}
+
+:host ::ng-deep .transparent-tab-menu .p-tabmenu-nav li.p-highlight .p-menuitem-link {
+  background: rgba(255, 255, 255, 0.2); /* Slight highlight effect */
+  color: #fff; /* Maintain white text */
+}
+
+:host ::ng-deep .transparent-tab-menu .p-tabmenu-nav li.p-highlight .p-menuitem-link:hover {
+  background: rgba(255, 255, 255, 0.3); /* Hover effect on active tab */
+}
+
+:host ::ng-deep.transparent-tab-menu .p-tabmenu-nav li .p-menuitem-link:hover {
+  background: rgba(255, 255, 255, 0.1); /* Slight hover effect on tabs */
+}

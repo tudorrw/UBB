@@ -1,0 +1,24 @@
+services:
+  mysql:
+    container_name: mysql-system-platform
+    image: mysql
+    environment:
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATA: /usr/local/mysql/data
+      MYQSL_DB: Unternehmensplattform
+    volumes:
+      - mysql:/data/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - spring-system
+    restart: unless-stopped
+
+networks:
+  spring-system:
+    driver: bridge
+
+volumes:
+  mysql:
+    driver: local

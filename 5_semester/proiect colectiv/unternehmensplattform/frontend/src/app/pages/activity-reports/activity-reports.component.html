@@ -1,0 +1,5 @@
+<div>
+  <app-activity-reports-admin *ngIf="userDetails?.role === UserRole.Administrator"></app-activity-reports-admin>
+  <app-activity-reports-employee *ngIf="userDetails?.role === UserRole.Employee"></app-activity-reports-employee>
+</div>
+

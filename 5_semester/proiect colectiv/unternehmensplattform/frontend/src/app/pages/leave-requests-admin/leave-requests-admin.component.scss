@@ -1,0 +1,68 @@
+
+:host ::ng-deep .p-datatable tbody tr {
+  height: 40px;
+}
+
+:host ::ng-deep .p-datatable tbody td {
+  padding: 4px 6px;
+}
+
+:host ::ng-deep .p-datatable thead th {
+  padding: 6px 10px;
+}
+
+.p-datatable-scrollable .p-datatable-tbody {
+  overflow-y: auto;
+}
+
+
+
+//.userRequests-container {
+//  width: 55%;
+//  margin: 0;
+//  padding: 0;
+//  position: absolute;
+//  top: 153px;
+//  left: 0;
+//}
+//
+//.requests-container {
+//  width: 40%;
+//  margin: 0;
+//  padding: 0;
+//  margin-left: 868px;
+//  position: absolute;
+//  top: 280px;
+//}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-input-icon-left {
+  margin-left: auto;
+}
+
+
+/* Culori pentru diferite statusuri */
+.status-approved {
+  color: green;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-rejected {
+  color: red;
+  font-weight: bold;
+}
+
+.status-default {
+  color: gray;
+  font-weight: bold;
+}

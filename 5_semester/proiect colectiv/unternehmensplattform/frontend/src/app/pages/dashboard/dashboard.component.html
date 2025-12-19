@@ -1,0 +1,5 @@
+<div>
+    <app-superadmin-dashboard *ngIf="userDetails?.role === UserRole.Superadmin"></app-superadmin-dashboard>
+    <app-administrator-dashboard *ngIf="userDetails?.role === UserRole.Administrator"></app-administrator-dashboard>
+    <app-employee-dashboard *ngIf="userDetails?.role === UserRole.Employee"></app-employee-dashboard>
+</div>

@@ -1,0 +1,30 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <p-panel [style]="{'width': '60vw', 'padding': '20px', 'box-shadow': '0px 0px 10px rgba(0, 0, 0, 0.1)'}">
+    <h3 class="text-center">Login</h3>
+
+    <!-- Display error messages if there are any -->
+    <div *ngIf="errorMsg.length > 0" class="p-mb-3">
+      <p-messages [value]="errorMsg" class="display:block;"></p-messages>
+    </div>
+
+    <div class="p-field p-mb-3" style="margin-bottom: 30px;">
+      <p-floatLabel variant="on">
+        <input id="login" type="email" pInputText [(ngModel)]="authRequest.email" style="width: 100%;" />
+        <label for="login">Email Address</label>
+      </p-floatLabel>
+    </div>
+
+    <div class="p-field p-mb-3" style="margin-bottom: 30px;">
+      <p-floatLabel variant="on">
+        <input id="password" type="password" pInputText [(ngModel)]="authRequest.passwordHash" style="width: 100%;" />
+        <label for="password">Password</label>
+      </p-floatLabel>
+    </div>
+    <!-- Sign in button -->
+    <div class="p-d-flex p-jc-between p-mb-3">
+      <button type="button" pButton (click)="login()" label="Log in" icon="pi pi-sign-in" class="p-button-primary" style="width: 100%;">
+<!--        <em class="fas fa-sign-in-alt">&nbsp;Log in</em>-->
+      </button>
+    </div>
+  </p-panel>
+</div>

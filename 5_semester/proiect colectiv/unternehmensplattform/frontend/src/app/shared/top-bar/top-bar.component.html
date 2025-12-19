@@ -1,0 +1,35 @@
+<div class="top-bar" style="background-color: #007bff; padding: 1rem; display: flex; align-items: center; justify-content: space-between;">
+  <!-- Tab Menu -->
+  <p-tabMenu
+    *ngIf="tabMenuItems.length > 0"
+    [model]="tabMenuItems"
+    [(activeItem)]="activeTab"
+    (activeItemChange)="onTabChange($event)"
+  ></p-tabMenu>
+
+  <!-- User Profile -->
+  <div class="user-profile">
+    <p-avatar
+      icon="pi pi-user"
+      [style]="{'width': '40px', 'height': '40px', 'background-color': '#fff', 'color': '#007bff', 'border-radius': '50%', 'cursor': 'pointer'}"
+      (click)="userMenu.toggle($event)">
+    </p-avatar>
+
+    <p-overlayPanel #userMenu [dismissable]="true">
+      <div class="user-details">
+        <strong>{{ userDetails?.firstName }} {{ userDetails?.lastName }}</strong>
+        <hr />
+        <p>{{ userDetails?.email }}</p>
+        <p *ngIf="userDetails?.role">Role: {{ userDetails?.role }}</p>
+        <p *ngIf="userDetails?.role === 'Administrator' || userDetails?.role === 'Employee'">
+          Company: {{ userDetails?.companyName }}
+        </p>
+      </div>
+      <hr />
+<!--      <button pButton label="My Account" (click)="goToProfile()" class="p-button-text"></button>-->
+      <div style="display: flex; align-items: center; justify-content: center">
+        <button pButton label="Logout" icon="pi pi-sign-out" (click)="logout()" class="p-button-text"></button>
+      </div>
+    </p-overlayPanel>
+  </div>
+</div>

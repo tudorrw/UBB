@@ -1,0 +1,66 @@
+:host ::ng-deep .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+:host ::ng-deep .p-dialog-footer {
+  padding-top: 1rem;
+}
+
+::ng-deep {
+  .p-datepicker td>span {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+
+.vacation-form-field {
+  margin-bottom: 1.5rem; /* Adaugă distanță între câmpuri */
+}
+
+.dropdown-field {
+  margin-top: 1.5rem; /* Adaugă distanță între calendar și dropdown */
+}
+/* Culori pentru diferite statusuri */
+.status-approved {
+  color: green;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-rejected {
+  color: red;
+  font-weight: bold;
+}
+
+.status-default {
+  color: gray;
+  font-weight: bold;
+}
+.date-highlight {
+  background-color: #9bf1af; /* Verde deschis */
+  color: #000000;           /* Text verde închis */
+
+  text-align: center;       /* Opțional: centrare text */
+}
+
+:host ::ng-deep .p-dialog {
+  max-width: 90vw; /* Pentru lățimea maximă pe dispozitive mici */
+  max-height: 90vh; /* Ajustează înălțimea relativ la viewport */
+}
+
+:host ::ng-deep .p-dialog .p-dialog-content {
+  overflow-y: auto; /* Adaugă scroll pentru conținut */
+}
+
+
+
+
+
