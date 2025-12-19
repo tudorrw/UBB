@@ -1,0 +1,40 @@
+We assume that the developed application has the following module-dependency diagram, where
+
+P – the complete application (with console interface)
+
+A – the module associated with functionality F01
+
+B – the module associated with functionality F02
+
+C – the module associated with functionality F03
+
+The aim of the assignment is to carry out Big-Bang integration tests and Top-Down integration tests.
+Using the supplied Spring Boot application, identify three modules that satisfy the given requirements and then prepare the following tests:
+
+Unit tests for each module
+
+Big-Bang integration of all modules
+
+Integration tests for integrating module A (P → A)
+
+Integration tests for integrating module B (P → A → B or P → B → A)
+
+Integration tests for integrating module C (choose any of:
+P → A → B → C, P → B → A → C, P → A → C → B,
+P → C → A → B, P → B → C → A, P → C → B → A)
+
+Please read the README file to gain a better understanding of the Spring application.
+
+In the package at src/test/java/com/vvss/FlavorFiesta/example_for_homework you will find stubs for the required tests that you must complete for this assignment. Some sample tests are already provided for inspiration.
+
+Big-Bang-Integrationstests: Ein einziger Testfall wird erstellt, um die gesamte Anwendung zu
+testen, einschließlich z. B. Benutzerverwaltung, Berechtigungen, Verwaltung der zugehörigen
+Entitäten, Geschäftslogik usw. Für das gegebene Projekt könnte ein Testszenario die
+Registrierung eines Benutzers, das Einstellen eines Rezepts, das Hinzufügen eines
+Kommentars und das Einreichen einer Bewertung umfassen.
+Top-Down-Integrationstests: Die Tests beginnen z.B. mit dem Benutzerverwaltungsmodul.
+Stubs/Mock-Objekte werden verwendet, um das Verhalten von untergeordneten Modulen wie
+Rezept-, Kommentar- und Review-Management zu simulieren. Die Tests konzentrieren sich auf
+die Interaktionen zwischen der Benutzerverwaltung und den Stubs untergeordneter Module, z.
+B. die Registrierung eines Benutzers und die Überprüfung, ob der Benutzer auf rezeptbezogene
+Funktionalitäten zugreifen kann.

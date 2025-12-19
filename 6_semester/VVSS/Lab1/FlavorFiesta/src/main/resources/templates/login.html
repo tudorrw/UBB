@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .login-container {
+            margin-top: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .login-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .login-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="login-container">
+                <h2 class="login-heading">Login to Flavor Fiesta</h2>
+                <img src="https://edibleallegheny.ediblecommunities.com/sites/default/files/images/article/flavor-fiesta_banner.PNG" alt="Flavor Fiesta" class="login-image">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button id="submit-button" type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#login-form').on("submit", function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Retrieve username and password from form inputs
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            // Send a POST request to the server to authenticate the user
+            $.ajax("/api/auth/signin",{
+                type: "POST",
+                data: JSON.stringify({ username: username, password: password }),
+                contentType: 'application/json'
+            })
+                .done(function(data) {
+                    // Store the credentials in cookies
+                    document.cookie = "credentials=" + data.replace("Basic ", "");
+
+                    // Redirect to the home page or perform any other action
+                    window.location.href = "/home";
+                })
+                .fail(function(xhr, status, error) {
+                    // Handle authentication failure, display error message, etc.
+                    console.log("Authentication failed:", error);
+                });
+        });
+    });
+</script>
+</html>

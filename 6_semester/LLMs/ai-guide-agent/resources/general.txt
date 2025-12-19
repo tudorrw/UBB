@@ -1,0 +1,9 @@
+py langchain docs: https://api.python.langchain.com/en/latest/langchain_api_reference.html#
+openai web seach docs: https://platform.openai.com/docs/guides/tools-web-search?api-mode=chat
+tipa asta e buna: https://www.youtube.com/watch?v=PR7xz5vQKGg&ab_channel=CodewithAniaKub%C3%B3w
+reddit perplexyty web seach: https://www.reddit.com/r/perplexity_ai/comments/1d1pgwr/how_to_perform_a_specific_web_search_with_the/
+List of AI LLM APIs Supporting Web Search: https://ithy.com/article/ai-llm-apis-with-web-search-support-rvnzhnl6
+query reasearch preprints across scientific domains: https://info.arxiv.org/help/api/
+open sourcs research papers api: https://www.coreapi.org/
+cool video about manus: https://www.youtube.com/watch?v=8ONF-Es1V8k&ab_channel=HauseCollective
+mcp video: https://www.youtube.com/watch?v=bp-RR-kr9yA&ab_channel=AIWorkshop

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:insert="fragments/navbar :: navbar"></div>
+<div class="container mt-4">
+    <input id="recipe-id" hidden th:value="${recipe.getId()}">
+    <h2 class="text-center mb-4" th:text="${recipe.title}">Recipe Title</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li th:each="ingredient : ${recipe.ingredients}" th:text="${ingredient}"></li>
+            </ul>
+            <h4>Instructions:</h4>
+            <p th:text="${recipe.instructions}">Recipe Instructions</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <h4>Comments:</h4>
+            <ul class="list-group">
+                <li class="list-group-item" th:each="comment : ${comments}">
+                    <strong th:text="${comment.getOwner().getUsername()}"></strong>: <span
+                        th:text="${comment.getContent()}"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Form to post a comment -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <form id="add-comment-form">
+                <div class="form-group">
+                    <label for="comment">Post a comment:</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#add-comment-form').on("submit", function (event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Retrieve username and password from form inputs
+            var content = $('#comment').val();
+            var recipeId = parseInt($('#recipe-id').val());
+
+            // Send a POST request to the server to authenticate the user
+            $.ajax("/api/comments/", {
+                type: "POST",
+                data: JSON.stringify({content, recipeId}),
+                contentType: 'application/json'
+            })
+                .done(function (data) {
+                    // Refresh the page to show the new comment
+                    window.location.reload();
+                })
+                .fail(function (xhr, status, error) {
+                    // Handle authentication failure, display error message, etc.
+                    console.log("Failed to post comment:", error);
+                });
+        });
+    });
+</script>
+</body>
+</html>

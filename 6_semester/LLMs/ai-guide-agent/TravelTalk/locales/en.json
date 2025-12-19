@@ -1,0 +1,68 @@
+{
+  "app": {
+    "name": "TravelTalk",
+    "description": "A social network for travelers"
+  },
+  "login": {
+    "welcome": "Welcome to TravelTalk",
+    "signUp": "Sign Up",
+    "login": "Login",
+    "name": "Name",
+    "email": "Email Address",
+    "password": "Password",
+    "submit": "Submit",
+    "dismiss": "Dismiss",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "error-handling": {
+      "invalid-email": "Invalid email format. Please check and try again.",
+      "invalid-password": "Password must be at least 6 characters long.",
+      "weak-password": "Password is too weak. Please use a stronger password.",
+      "email-already-in-use": "This email is already connected to an account.",
+      "do-you-want-to-login": "Do you want to login instead?",
+      "invalid-credentials": "This email and password combination is incorrect."
+    }
+  },
+
+  "settings": {
+    "Settings": "Settings",
+    "language": "Language",
+    "mapSettings": "Map Settings",
+    "radius": "Radius",
+    "mapType": "Type",
+    "appearance": "Appearance",
+    "logout": "Log Out"
+  },
+  "languages": {
+    "english": "English",
+    "romanian": "Romanian",
+    "german": "German"
+  },
+  "radius": {
+    "300": "300 Meters",
+    "1000": "1 Kilometer",
+    "3000": "3 Kilometers",
+    "5000": "5 Kilometers",
+    "custom": "Custom"
+  },
+  "mapType": {
+    "standard": "Standard",
+    "satellite": "Satellite"
+  },
+  "appearance": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "categories": {
+    "near": "Nearby",
+    "questions": "Questions",
+    "recommended": "Recommended",
+    "history": "History"
+  },
+  "noImage": "No Image Available",
+  "search" : {
+    "searchBarPlaceholder" : "Search for a place...",
+    "noResults" : "No places found matching your search."
+  }
+}

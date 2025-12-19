@@ -1,0 +1,6 @@
+fireship: https://www.youtube.com/watch?v=klTvEwg3oJ4&ab_channel=Fireship
+fireship waviate: https://www.youtube.com/watch?v=mBcBoGhFndY&pp=ygUPdmVjdG9yIGRhdGFiYXNl
+
+embeddings by google: https://www.youtube.com/watch?v=my5wFNQpFO0&ab_channel=GoogleforDevelopers
+embeddings computerphile: https://www.youtube.com/watch?v=gQddtTdmG_8&t=4s&ab_channel=Computerphile
+embeddings open source vs openai: https://www.youtube.com/watch?v=QdDoFfkVkcw&t=2783s&ab_channel=RabbitHoleSyndrome

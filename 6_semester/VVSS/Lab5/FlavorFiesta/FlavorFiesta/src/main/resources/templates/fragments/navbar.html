@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div class="container">
+        <a class="navbar-brand" href="#">Flavor Fiesta</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/home}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/users}">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/profile}">My Profile</a>
+                </li>
+            </ul>
+            <!-- Sign Out button on the right side -->
+            <ul id="sign-out" class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#sign-out').on("click", function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                document.cookie = "credentials=";
+
+                // Redirect to the home page or perform any other action
+                window.location.href = "/login";
+            });
+        })
+    </script>
+</nav>
+</body>
+</html>

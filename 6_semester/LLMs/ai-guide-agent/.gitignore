@@ -1,0 +1,5 @@
+llm-venv
+LLM/chroma_db
+LLM/__pycache__
+
+TravelTalk/package-lock.json

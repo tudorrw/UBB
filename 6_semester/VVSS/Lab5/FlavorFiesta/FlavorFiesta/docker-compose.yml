@@ -1,0 +1,25 @@
+services:
+  flavor-fiesta-db:
+    image: postgres:16
+    container_name: flavor-fiesta-db
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: flavor_fiesta
+      POSTGRES_DB: flavor_fiesta
+      POSTGRES_PASSWORD: flavor_password
+    volumes:
+      - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+  flavor-fiesta-test-db:
+    image: postgres:16
+    container_name: flavor-fiesta-test-db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: flavor_fiesta
+      POSTGRES_DB: flavor_fiesta_test
+      POSTGRES_PASSWORD: flavor_password
+
+volumes:
+  database-data: # named volumes can be managed easier using docker-compose
+

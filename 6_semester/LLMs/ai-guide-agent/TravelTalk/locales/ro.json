@@ -1,0 +1,67 @@
+{
+  "app": {
+    "name": "TravelTalk",
+    "description": "O rețea socială pentru călători"
+  },
+  "login": {
+    "welcome": "Bine ai venit la TravelTalk",
+    "signUp": "Înregistrare",
+    "login": "Conectare",
+    "name": "Nume",
+    "email": "Adresă de Email",
+    "password": "Parolă",
+    "submit": "Trimite",
+    "dismiss": "Închide",
+    "forgotPassword": "Ai uitat parola?",
+    "noAccount": "Nu ai un cont?",
+    "alreadyHaveAccount": "Ai deja un cont?",
+    "error-handling": {
+      "invalid-email": "Format de email invalid. Te rugăm să verifici și să încerci din nou.",
+      "invalid-password": "Parola trebuie să aibă cel puțin 6 caractere.",
+      "weak-password": "Parola este prea slabă. Te rugăm să folosești o parolă mai puternică.",
+      "email-already-in-use": "Această adresă de email este deja conectată la un cont.",
+      "do-you-want-to-login": "Vrei să te conectezi în schimb?",
+      "invalid-credentials": "Această combinație de email și parolă este incorectă."
+    }
+  },
+  "settings": {
+    "Settings": "Setări",
+    "language": "Limbă",
+    "mapSettings": "Setări Hartă",
+    "radius": "Rază",
+    "mapType": "Tip",
+    "appearance": "Aspect",
+    "logout": "Deconectare"
+  },
+  "languages": {
+    "english": "Engleză",
+    "romanian": "Română",
+    "german": "Germană"
+  },
+  "radius": {
+    "300": "300 Metri",
+    "1000": "1 Kilometru",
+    "3000": "3 Kilometri",
+    "5000": "5 Kilometri",
+    "custom": "Personalizat"
+  },
+  "mapType": {
+    "standard": "Standard",
+    "satellite": "Satelit"
+  },
+  "appearance": {
+    "light": "Luminos",
+    "dark": "Întunecat"
+  },
+  "categories": {
+    "near": "În aproapiere",
+    "questions": "Întrebări",
+    "recommended": "Recomandate",
+    "history": "Istoric"
+  },
+  "noImage": "Imagine Indisponibilă",
+  "search" : {
+    "searchBarPlaceholder" : "Caută un loc...",
+    "noResults" : "Nu s-au găsit locuri care să corespundă căutării tale."
+  }
+}

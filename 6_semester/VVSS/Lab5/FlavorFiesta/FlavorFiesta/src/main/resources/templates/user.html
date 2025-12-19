@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:insert="fragments/navbar :: navbar"></div>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">User Profile</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h4 th:text="'Username: ' + ${user.username}">Username: </h4>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <h4>Reviews:</h4>
+            <ul class="list-group">
+                <li class="list-group-item" th:each="review : ${reviews}">
+                    <strong th:text="${review.recipe.title}"></strong>:
+                    <span th:text="${review.comment}"></span>
+                    <!-- Display stars representing the score -->
+                    <span th:each="star : ${#numbers.sequence(1, review.rating)}">&#9733;</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <h4>Recipes:</h4>
+            <ul class="list-group">
+                <li class="list-group-item" th:each="recipe : ${userRecipes}">
+                    <a th:href="@{'/recipe/' + ${recipe.id}}" th:text="${recipe.title}"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

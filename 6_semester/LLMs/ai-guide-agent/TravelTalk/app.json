@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "TravelTalk",
+    "slug": "TravelTalk",
+    "description": "TravelTalk is an app to help travelers learn more about the places they visit.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dacian22.TravelTalk"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.dacian22.TravelTalk"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "server",
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://evanbacon.dev/"
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "owner": "dacian22",
+    "extra": {
+      "eas": {
+        "projectId": "76c08c18-c449-46cb-a236-79077081fc6f"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/76c08c18-c449-46cb-a236-79077081fc6f"
+    }
+  }
+}

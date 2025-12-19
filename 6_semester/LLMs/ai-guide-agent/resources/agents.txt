@@ -1,0 +1,10 @@
+google agents: https://www.youtube.com/watch?v=Qd6anWv0mv0&list=PL1UhL0TkjVTALuWukhBSkPeiFnhLJshNr&index=33&ab_channel=GoogleCloudTech
+website into knowledge: https://www.youtube.com/watch?v=JWfNLF_g_V0&t=919s&ab_channel=ColeMedin
+anthropic tips to build ai agents: https://www.youtube.com/watch?v=LP5OCa20Zpg&t=344s&ab_channel=Anthropic
+function calling / rag: https://www.youtube.com/watch?v=L6suEeJ3XXc&ab_channel=EdenMarco
+function calling: https://www.youtube.com/watch?v=Qor2VZoBib0&ab_channel=LearnDatawithMark
+
+funciton calling, in depth: https://www.youtube.com/watch?v=gMeTK6zzaO4&ab_channel=AdamLucek
+ai agents presentation: https://www.youtube.com/watch?v=-rsTkYgnNzM&ab_channel=AIEngineer
+internet scraping via llms: https://www.youtube.com/watch?v=7kbQnLN2y_I&t=292s&ab_channel=AIJason
+openai functionalities: https://www.youtube.com/watch?v=RPbmMmcNvYA&ab_channel=SamWitteveen

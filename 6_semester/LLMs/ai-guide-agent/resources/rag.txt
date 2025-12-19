@@ -1,0 +1,5 @@
+bycloud rag: https://www.youtube.com/watch?v=5Y3a61o0jFQ&t=26s&ab_channel=bycloud
+local llms: https://www.youtube.com/watch?v=XwL_cRuXM2E&t=438s&ab_channel=bycloud
+llms papers: https://www.youtube.com/watch?v=tF-SBS5PuQY&ab_channel=bycloud
+training llms: https://www.youtube.com/watch?v=wkDE2hyf5jU&t=322s&ab_channel=bycloud
+special pentru roa: https://www.youtube.com/watch?v=PR7xz5vQKGg&ab_channel=CodewithAniaKub%C3%B3w
